@@ -74,7 +74,7 @@ body{
 }
 
 .shadow{
-    box-shadow: 2px 2px 4px 1px #e0e0e0;
+    box-shadow: 0px 0px 4px 2px #e0e0e0;
 }
 
 .mt-56{
@@ -133,6 +133,7 @@ body{
     height: 48px;
     padding: 2px 2px;
     border-radius: 4px;
+    position: relative;
 }
 
 .header__search-location{
@@ -160,6 +161,10 @@ body{
     border-left: 1px solid #e7e7e7;
 }
 
+.header__search-client:hover + .header__search-client-extend{
+    display: block;
+}
+
 .header__search-calendar i,
 .header__search-client i{
     margin-right: 10px;
@@ -175,6 +180,83 @@ body{
     margin-top: 4px;
     display: inline-block;
 }
+
+.header__search-client-extend {
+    width: 320px;
+    height: 230px;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 340px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 12px;
+    display: none;
+}
+.client-extend__row {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.client-extend__content {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.client-extend__content-note {
+    color:#9a9a9a;
+    font-size: 1.2rem;
+    margin-top: 4px;
+}
+.client-extend__updown {
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.client-extend__updown input{
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    text-align: center;
+    border: none;
+}
+
+.client-extend__down, .client-extend__up {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #d6dbe1;
+    font-size: 2rem;
+    font-weight: 300;
+    background-color: #f5f7fa;
+}
+
+.client-extend__option{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+}
+
+.client-extend__del{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 500px;
+    background-color: unset;
+    border: none;
+    margin-bottom: -12px;
+}
+
+.client-extend__apply{
+    color: #f65e39;
+    font-size: 1.6rem;
+    font-weight: 500px;
+    background-color: unset;
+    border: none;
+    margin-bottom: -12px;
+}
+
 
 .header__search-button{
     flex: 1;
@@ -260,8 +342,7 @@ body{
 }
 
 .slide__img{
-    display: block;
-
+    display: none;
 }
 
 .slide__img img{
@@ -283,7 +364,7 @@ body{
     background-color: #8fbcc8;
     margin: 0 5px;
 }
-.slide__sticky-dot:hover{
+.slide__sticky-dot:hover, .active{
     background-color: #797373;
 }
 
