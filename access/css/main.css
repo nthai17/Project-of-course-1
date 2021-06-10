@@ -766,8 +766,14 @@ body{
     position: fixed;
     bottom: 32px;
     left: 32px;
+    opacity: 0.8;
 }
-
+.call:hover .call-center{
+    background-color: lightcoral;
+}
+.call:hover .border{
+    background-color: rgb(247, 184, 184);
+}
 .call-center{
     display: flex;
     justify-content: center;
