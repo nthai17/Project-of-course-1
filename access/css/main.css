@@ -96,7 +96,7 @@ body{
     top: 0;
     left:0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 .header-container{
@@ -161,9 +161,9 @@ body{
     border-left: 1px solid #e7e7e7;
 }
 
-.header__search-client:hover + .header__search-client-extend{
+/* .header__search-client:hover + .header__search-client-extend{
     display: block;
-}
+} */
 
 .header__search-calendar i,
 .header__search-client i{
@@ -364,7 +364,7 @@ body{
     background-color: #8fbcc8;
     margin: 0 5px;
 }
-.slide__sticky-dot:hover, .active{
+.slide__sticky-dot:hover, ._active{
     background-color: #797373;
 }
 
@@ -847,7 +847,8 @@ body{
     position: fixed;
     bottom: 32px;
     left: 32px;
-    opacity: 0.8;
+    opacity: 0.75;
+    z-index: 10;
 }
 .call:hover .call-center{
     background-color: lightcoral;
@@ -878,7 +879,11 @@ body{
 
 @keyframes zoom-in-out{
     50% {
-       transform: scale(0);
+       transform: scale(0.8);
+    }
+    100% {
+       transform: scale(1);
+
     }
 }
 

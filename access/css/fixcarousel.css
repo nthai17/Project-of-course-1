@@ -1,0 +1,58 @@
+.place .owl-item {
+    border-radius: 6px;
+}
+.discount .owl-item{
+    border-radius: 12px;
+}
+.place .owl-nav, .discount .owl-nav, .discover .owl-nav, .tutorial .owl-nav{
+    height: 0;
+    position: absolute;
+    top: calc(50% - 40px);
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.suggestions .owl-nav {
+    height: 0;
+    position: absolute;
+    top: calc(50% - 100px);
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.place .owl-nav .owl-prev, .discount .owl-nav .owl-prev, .suggestions .owl-nav .owl-prev, .discover .owl-nav .owl-prev, .tutorial .owl-nav .owl-prev{
+    height: 56px;
+    width: 56px;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 0 7px -4px #000;
+    border-radius: 50%;
+    font-size: 2.5rem !important;
+    position: absolute;
+    left: -20px;
+}
+
+.place .owl-nav .owl-next, .discount .owl-nav .owl-next, .suggestions .owl-nav .owl-next, .discover .owl-nav .owl-next, .tutorial .owl-nav .owl-next {
+    height: 56px;
+    width: 56px;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 0 7px -4px #000;
+    border-radius: 50%;
+    font-size: 2.5rem !important;
+    position: absolute;
+    right: -20px;
+}
+
+.place .owl-nav .owl-next:hover, 
+.discount .owl-nav .owl-next:hover, 
+.suggestions .owl-nav .owl-next:hover,
+.place .owl-nav .owl-prev:hover, 
+.discount .owl-nav .owl-prev:hover, 
+.suggestions .owl-nav .owl-prev:hover,
+.discover .owl-nav .owl-prev:hover,
+.discover .owl-nav .owl-next:hover, 
+.tutorial .owl-nav .owl-prev:hover,
+.tutorial .owl-nav .owl-next:hover{
+    color: #ea6060;
+}

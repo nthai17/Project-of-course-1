@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./access/fonts/Themify-icons-font/themify-icons.css">
     <link rel="stylesheet" href="./access/fonts/fontawesome-free-5.15.2-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- font Roboto -->
+    <link rel="stylesheet" href="./access/css/owl.carousel.css">
+    <link rel="stylesheet" href="./access/css/owl.theme.default.css">
+    <link rel="stylesheet" href="./access/css/fixcarousel.css">
+    
 </head>
 <body>
     <div class="app">
@@ -41,7 +45,7 @@
                                     <span>Số khách</span>
                                 </a>
                             </div>
-                            <div class="header__search-client-extend shadow">
+                            <div id="extend-client" class="header__search-client-extend shadow">
                                 <div class="client-extend__row">
                                     <div class="client-extend__content">
                                         <div>Người lớn</div>
@@ -169,78 +173,104 @@
                 <div class="place mt-56">
                     <h2 class="container__title">Địa điểm nổi bật</h2>
                     <p class="container__content">Cùng Maxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
-                    <div class="grid__row is-relative-box">
-                        <div class="grid__column-2-10">
-                            <a href="#" class="place__item">
-                                <div class="place__item-img">
-                                    <img src="./access/img/Hn.png" alt="hình ảnh">
-                                </div>
-                                <div class="place__item-content">
-                                    <h3 class="place__item-content-town">Hà Nội</h3>
-                                    <span class="place__item-content-number">
-                                        <strong>3181</strong> Chỗ ở
-                                    </span>
-                                </div>
-                            </a>
+                    <div class="owl-carousel owl-theme">
+                        <div class="">
+                                <a href="#" class="place__item">
+                                    <div class="place__item-img">
+                                        <img src="./access/img/Hn.png" alt="hình ảnh">
+                                    </div>
+                                    <div class="place__item-content">
+                                        <h3 class="place__item-content-town">Hà Nội</h3>
+                                        <span class="place__item-content-number">
+                                            <strong>3181</strong> Chỗ ở
+                                        </span>
+                                    </div>
+                                </a>
                         </div>
-                        <div class="grid__column-2-10">
-                            <a href="#" class="place__item">
-                                <div class="place__item-img">
-                                    <img src="./access/img/HCM.png" alt="hình ảnh">
-                                </div>
-                                <div class="place__item-content">
-                                    <h3 class="place__item-content-town">TP. Hồ Chí Minh</h3>
-                                    <span class="place__item-content-number">
-                                        <strong>2857</strong> Chỗ ở
-                                    </span>
-                                </div>
-                            </a>
+                        <div class="">
+                                <a href="#" class="place__item">
+                                    <div class="place__item-img">
+                                        <img src="./access/img/HCM.png" alt="hình ảnh">
+                                    </div>
+                                    <div class="place__item-content">
+                                        <h3 class="place__item-content-town">TP. Hồ Chí Minh</h3>
+                                        <span class="place__item-content-number">
+                                            <strong>2857</strong> Chỗ ở
+                                        </span>
+                                    </div>
+                                </a>
                         </div>
-                        <div class="grid__column-2-10">
-                            <a href="#" class="place__item">
-                                <div class="place__item-img">
-                                    <img src="./access/img/VT.png" alt="hình ảnh">
-                                </div>
-                                <div class="place__item-content">
-                                    <h3 class="place__item-content-town">Vũng Tàu</h3>
-                                    <span class="place__item-content-number">
-                                        <strong>666</strong> Chỗ ở
-                                    </span>
-                                </div>
-                            </a>
+                        <div class="">
+                                <a href="#" class="place__item">
+                                    <div class="place__item-img">
+                                        <img src="./access/img/VT.png" alt="hình ảnh">
+                                    </div>
+                                    <div class="place__item-content">
+                                        <h3 class="place__item-content-town">Vũng Tàu</h3>
+                                        <span class="place__item-content-number">
+                                            <strong>666</strong> Chỗ ở
+                                        </span>
+                                    </div>
+                                </a>
                         </div>
-                        <div class="grid__column-2-10">
-                            <a href="#" class="place__item">
-                                <div class="place__item-img">
-                                    <img src="./access/img/ĐL.png" alt="hình ảnh">
-                                </div>
-                                <div class="place__item-content">
-                                    <h3 class="place__item-content-town">Đà Lạt</h3>
-                                    <span class="place__item-content-number">
-                                        <strong>1667</strong> Chỗ ở
-                                    </span>
-                                </div>
-                            </a>
+                        <div class="">
+                                <a href="#" class="place__item">
+                                    <div class="place__item-img">
+                                        <img src="./access/img/ĐL.png" alt="hình ảnh">
+                                    </div>
+                                    <div class="place__item-content">
+                                        <h3 class="place__item-content-town">Đà Lạt</h3>
+                                        <span class="place__item-content-number">
+                                            <strong>1667</strong> Chỗ ở
+                                        </span>
+                                    </div>
+                                </a>
                         </div>
-                        <div class="grid__column-2-10">
-                            <a href="#" class="place__item">
-                                <div class="place__item-img">
-                                    <img src="./access/img/ĐN.png" alt="hình ảnh">
-                                </div>
-                                <div class="place__item-content">
-                                    <h3 class="place__item-content-town">Đà Nẵng</h3>
-                                    <span class="place__item-content-number">
-                                        <strong>1024</strong> Chỗ ở
-                                    </span>
-                                </div>
-                            </a>
+                        <div class="">
+                                <a href="#" class="place__item">
+                                    <div class="place__item-img">
+                                        <img src="./access/img/ĐN.png" alt="hình ảnh">
+                                    </div>
+                                    <div class="place__item-content">
+                                        <h3 class="place__item-content-town">Đà Nẵng</h3>
+                                        <span class="place__item-content-number">
+                                            <strong>1024</strong> Chỗ ở
+                                        </span>
+                                    </div>
+                                </a>
                         </div>
-                        <div class="next-sticky">
-                            <i class="fas fa-chevron-right"></i>
+                        <div class="">
+                                <a href="#" class="place__item">
+                                    <div class="place__item-img">
+                                        <img src="./access/img/NT.png" alt="hình ảnh">
+                                    </div>
+                                    <div class="place__item-content">
+                                        <h3 class="place__item-content-town">Nha Trang</h3>
+                                        <span class="place__item-content-number">
+                                            <strong>650</strong> Chỗ ở
+                                        </span>
+                                    </div>
+                                </a>
                         </div>
-                        <div class="prev-sticky sticky-disable">
-                            <i class="fas fa-chevron-left"></i>
+                        <div class="">
+                                <a href="#" class="place__item">
+                                    <div class="place__item-img">
+                                        <img src="./access/img/QN.png" alt="hình ảnh">
+                                    </div>
+                                    <div class="place__item-content">
+                                    <h3 class="place__item-content-town">Quảng Ninh</h3>
+                                        <span class="place__item-content-number">
+                                            <strong>217</strong> Chỗ ở
+                                        </span>
+                                    </div>
+                                </a>
                         </div>
+                        <!-- <div class="next-sticky">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="prev-sticky sticky-disable">
+                                <i class="fas fa-chevron-left"></i>
+                            </div> -->
                     </div>
                 </div>
                 <div class="discount mt-56">
@@ -251,41 +281,62 @@
                             Xem thêm
                         </a>
                     </div>
-                    <div class="grid__row is-relative-box">
-                        <div class="grid__column-4-12">
+                    <div class="owl-carousel owl-theme">
+                        <div>
                             <a href="#" class="discount__item">
                                 <div class="discount__item-img">
                                     <img src="./access/img/discount-1.jpg" alt="hình ảnh">
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-4-12">
+                        <div>
                             <a href="#" class="discount__item">
                                 <div class="discount__item-img">
                                     <img src="./access/img/discount.jpg" alt="hình ảnh">
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-4-12">
+                        <div>
                             <a href="#" class="discount__item">
                                 <div class="discount__item-img">
                                     <img src="./access/img/discount-2.jpg" alt="hình ảnh">
                                 </div>
                             </a>
                         </div>
-                        <div class="next-sticky">
+                        <div>
+                            <a href="#" class="discount__item">
+                                <div class="discount__item-img">
+                                    <img src="./access/img/beach.jpg" alt="hình ảnh">
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="discount__item">
+                                <div class="discount__item-img">
+                                    <img src="./access/img/sontung.jpg" alt="hình ảnh">
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="discount__item">
+                                <div class="discount__item-img">
+                                    <img src="./access/img/dilame.jpg" alt="hình ảnh">
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="next-sticky">
                             <i class="fas fa-chevron-right"></i>
                         </div>
                         <div class="prev-sticky sticky-disable">
                             <i class="fas fa-chevron-left"></i>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="suggestions mt-56">
                     <h2 class="container__title">Gợi ý từ Maxstay</h2>
                     <p class="container__content">Những địa điểm thường đến mà Maxstay gợi ý dành cho bạn</p>
-                    <div class="grid__row is-relative-box">
-                        <div class="grid__column-3-12">
+                    <div class="owl-carousel owl-theme">
+                        <div>
                             <a href="#" class="suggestions__item">
                                 <div class="suggestions__item-img">
                                     <img src="./access/img/suggestions-vt.jpg" alt="hình ảnh">
@@ -296,7 +347,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-3-12">
+                        <div>
                             <a href="#" class="suggestions__item">
                                 <div class="suggestions__item-img">
                                     <img src="./access/img/suggestions-hn.jpg" alt="hình ảnh">
@@ -307,7 +358,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-3-12">
+                        <div>
                             <a href="#" class="suggestions__item">
                                 <div class="suggestions__item-img">
                                     <img src="./access/img/suggestions-hn-nt.jpg" alt="hình ảnh">
@@ -318,7 +369,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-3-12">
+                        <div>
                             <a href="#" class="suggestions__item">
                                 <div class="suggestions__item-img">
                                     <img src="./access/img/suggestions-sg.jpg" alt="hình ảnh">
@@ -329,19 +380,52 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="next-sticky fix-sticky-suggestions">
+                        <div>
+                            <a href="#" class="suggestions__item">
+                                <div class="suggestions__item-img">
+                                    <img src="./access/img/suggestions-sg-bbq.jpg" alt="hình ảnh">
+                                </div>
+                                <div class="suggestions__item-content">
+                                    <h3 class="suggestions__item-content-title">BỂ BƠI & BBQ</h3>
+                                    <p class="suggestions__item-content-desc">Trải nghiệm đẳng cấp tại những căn homestay có bể bơi đẹp và khu vực BBQ ấm cúng.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="suggestions__item">
+                                <div class="suggestions__item-img">
+                                    <img src="./access/img/suggestions-sg-sale.jpg" alt="hình ảnh">
+                                </div>
+                                <div class="suggestions__item-content">
+                                    <h3 class="suggestions__item-content-title">SIÊU GIẢM GIÁ!</h3>
+                                    <p class="suggestions__item-content-desc">Top chỗ ở giảm giá đến 50% từ các chủ nhà thân thiện trên Luxstay.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="suggestions__item">
+                                <div class="suggestions__item-img">
+                                    <img src="./access/img/suggestions-sg-center.jpg" alt="hình ảnh">
+                                </div>
+                                <div class="suggestions__item-content">
+                                    <h3 class="suggestions__item-content-title">GẦN TRUNG TÂM!</h3>
+                                    <p class="suggestions__item-content-desc">Dễ dàng di chuyển khắp nơi với top chỗ ở khu vực trung tâm thành phố Hồ Chí Minh.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="next-sticky fix-sticky-suggestions">
                             <i class="fas fa-chevron-right"></i>
                         </div>
                         <div class="prev-sticky fix-sticky-suggestions sticky-disable">
                             <i class="fas fa-chevron-left"></i>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="discover mt-56">
                     <h2 class="container__title">Gợi ý khám phá</h2>
                     <p class="container__content">Để mỗi chuyến đi là một hành trình truyền cảm hứng, mỗi căn phòng là một khoảng trời an yên</p>
-                    <div class="grid__row is-relative-box">
-                        <div class="grid__column-4-12">
+                    <div class="owl-carousel owl-theme">
+                        <div>
                             <a href="#" class="discover__item is-relative-box">
                                 <div class="discover__item-img">
                                     <img src="./access/img/discover1.jpg" alt="hình ảnh">
@@ -356,7 +440,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-4-12">
+                        <div>
                             <a href="#" class="discover__item is-relative-box">
                                 <div class="discover__item-img">
                                     <img class="discover-img2-fixed" src="./access/img/discover2.jpg" alt="hình ảnh">
@@ -371,7 +455,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-4-12">
+                        <div>
                             <a href="#" class="discover__item is-relative-box">
                                 <div class="discover__item-img">
                                     <img class="discover-img3-fixed" src="./access/img/discover3.jpg" alt="hình ảnh">
@@ -386,46 +470,90 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="next-sticky">
+                        <div>
+                            <a href="#" class="discover__item is-relative-box">
+                                <div class="discover__item-img">
+                                    <img class="discover-img3-fixed" src="./access/img/discover-zoodoo-da-lat.jpg" alt="hình ảnh">
+                                </div>
+                                <div class="discover__item-content">
+                                    <h3 class="discover__item-content-heading">
+                                        Trải nghiệm thú vị ở sở thú Zoodoo Đà Lạt
+                                    </h3>
+                                    <span class="discover__item-content-communications">
+                                        THÔNG TIN HOMESTAY
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="discover__item is-relative-box">
+                                <div class="discover__item-img">
+                                    <img class="discover-img3-fixed" src="./access/img/discover-khach-san.jpg" alt="hình ảnh">
+                                </div>
+                                <div class="discover__item-content">
+                                    <h3 class="discover__item-content-heading">
+                                        Mức phí cách ly tại khách sạn, resort ở Việt Nam cho du khách có nhu cầu
+                                    </h3>
+                                    <span class="discover__item-content-communications">
+                                        THÔNG TIN HOMESTAY
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="next-sticky">
                             <i class="fas fa-chevron-right"></i>
                         </div>
                         <div class="prev-sticky sticky-disable">
                             <i class="fas fa-chevron-left"></i>
-                        </div>
+                        </div> -->
                     </div>
                     
                 </div>
                 <div class="tutorial mt-56">
                     <h2 class="container__title">Hướng dẫn sử dụng</h2>
                     <p class="container__content">Đặt chỗ nhanh, thanh toán đơn giản, sử dụng dễ dàng</p>
-                    <div class="grid__row is-relative-box">
-                        <div class="grid__column-4-12">
+                    <div class="owl-theme owl-carousel">
+                        <div>
                             <a href="#" class="tutorial__item is-relative-box">
                                 <div class="tutorial__item-img">
                                     <img src="./access/img/tutorial1.jpg" alt="hình ảnh">
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-4-12">
+                        <div>
                             <a href="#" class="tutorial__item is-relative-box">
                                 <div class="tutorial__item-img">
                                     <img src="./access/img/tutorial2.jpg" alt="hình ảnh">
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-4-12">
+                        <div>
                             <a href="#" class="tutorial__item is-relative-box">
                                 <div class="tutorial__item-img">
                                     <img src="./access/img/tutorial3.jpg" alt="hình ảnh">
                                 </div>
                             </a>
                         </div>
-                        <div class="next-sticky">
+                        <div>
+                            <a href="#" class="tutorial__item is-relative-box">
+                                <div class="tutorial__item-img">
+                                    <img src="./access/img/tutoria4.jpg" alt="hình ảnh">
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="tutorial__item is-relative-box">
+                                <div class="tutorial__item-img">
+                                    <img src="./access/img/tutorial5.jpg" alt="hình ảnh">
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="next-sticky">
                             <i class="fas fa-chevron-right"></i>
                         </div>
                         <div class="prev-sticky sticky-disable">
                             <i class="fas fa-chevron-left"></i>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="intro">
@@ -603,6 +731,8 @@
             <div class="border"></div>
         </div>
     </a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./access/js/owl.carousel.min.js"></script>
     <script src="./access/js/app.js"></script>
 </body>
 </html>
