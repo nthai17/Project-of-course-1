@@ -121,7 +121,7 @@ body{
     text-decoration: none;
 }
 
-.header__logo-link:hover svg{
+.header__logo-link:hover .cls-1{
     fill: var(--hover-color);
 }
 
@@ -256,10 +256,24 @@ body{
     border: none;
     margin-bottom: -12px;
 }
+.client-extend__down,
+.client-extend__up,
+.client-extend__del,
+.client-extend__apply {
+    cursor: pointer;
+}
 
+.client-extend__down:hover,
+.client-extend__up:hover{
+    color: var(--hover-color);
+}
 
 .header__search-button{
     flex: 1;
+}
+
+.header__search-button button{
+    cursor: pointer;
 }
 
 .header__search-button button{
@@ -281,6 +295,9 @@ body{
     display: flex;
     list-style: none;
     align-items: center;
+}
+.header__navbar-link:nth-child(-n+3):hover {
+    color: var(--hover-color);
 }
 
 .header__navbar-link{
@@ -331,6 +348,59 @@ body{
     right: 11px;
 }
 
+.header__navbar-language{
+    width: 470px;
+    height: 150px;
+    position: absolute;
+    top: calc(100% - 8px);
+    right: 48px;
+    background-color: var(--white-color);
+    display: flex;
+    display: none;
+}
+
+.header__navbar-language::after{
+    content: "";
+    top: -9px;
+    right: 32px;
+    transform: rotate(45deg);
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: var(--white-color);
+    border-left: 1px solid #e2e5e9;
+    border-top: 1px solid #e2e5e9;
+}
+
+.language, .currency {
+    width: 50%;
+    height: 100%;
+}
+
+.vietnamese, .english, .korean, .vnd, .usd {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 33.33333%;
+    cursor: pointer;
+}
+.vietnamese:hover , .english:hover, .korean:hover, .vnd:hover, .usd:hover {
+    color: var(--hover-color);
+}
+
+.vietnamese img, .english img, .korean img{
+    height: 16px;
+    width: 16px;
+    margin: 0 12px;
+}
+
+.vietnamese span, .english span, .korean span, .currency span{
+    font-size: 1.6rem;
+    margin-right: 12px;
+}
+.vnd-currency, .usd-currency {
+    font-weight: 500;
+}
 /* slider */
 .slide{
     padding: 42px 0;
@@ -386,7 +456,9 @@ body{
 .opening__content-link{
     color: var(--primary-color);
 }
-
+.opening__content-link:hover{
+    color: var(--hover-color);
+}
 .opening__item{
     text-decoration: none;
     color: var(--text-color);
