@@ -18,6 +18,7 @@ html{
 }
 body{
     margin: 0;
+    background-image: url('../img/background.png');
 }
 
 .grid{
@@ -80,7 +81,9 @@ body{
 .mt-56{
     margin-top: 56px;
 }
-
+.mt-120{
+    margin-top: 120px;
+}
 .is-flex-box{
     display: flex;
     align-items: center;
@@ -464,8 +467,16 @@ body{
     color: var(--text-color);
     display: block;
     border-radius: 12px;
+    background-color: #fff;
 }
-
+.opening-wrap{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 560px;
+    padding-top: 16px;
+    padding-left: 7px;
+    border-radius: 14px;
+}
 .opening__item:hover .opening__item-content-title{
     color: var(--hover-color);
 }
@@ -1033,7 +1044,8 @@ body{
 }
 
 .auth-form{
-    background-color: var(--white-color);
+    /* background-color: var(--white-color); */
+    background-image: url('../img/background.png');
     border-radius: 8px;
     width: 500px;
     overflow: hidden;
