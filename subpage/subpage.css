@@ -15,6 +15,12 @@
     border-radius: 4px;
     display: inline-block;
 }
+.container__option-item:hover{
+    background-color: rgb(233 99 58 / 60%);
+}
+.container__option-item:hover a{
+    color: var(--white-color);
+}
 .container__option-link{
     text-decoration: none;
     display: inline-block;

@@ -217,6 +217,8 @@ let resForm = document.getElementById('resform');
 let logForm = document.getElementById('logform');
 let resBtn = document.getElementById('resbtn');
 let logBtn = document.getElementById('logbtn');
+let resBtn2 = document.getElementById('resbtn2');
+let logBtn2 = document.getElementById('logbtn2');
 let resBack = document.getElementById('resback')
 let logBack = document.getElementById('logback')
 let switchTolog = document.getElementById('switch-to-log')
@@ -246,7 +248,16 @@ switchTores.addEventListener('click', function(){
     resForm.style.display = "block";
     logForm.style.display = "none";
 })
-
+resBtn2.addEventListener('click', function () {
+    myModal.style.display = "flex";
+    resForm.style.display = "block";
+    logForm.style.display = "none";
+})
+logBtn2.addEventListener('click', function () {
+    myModal.style.display = "flex";
+    logForm.style.display = "block";
+    resForm.style.display = "none"
+})
 let fm = document.getElementsByClassName('auth-form__container');
 for (var i = 0; i < fm.length; i++) {
     fm[i].addEventListener('submit', function (){
