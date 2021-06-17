@@ -121,23 +121,23 @@ $('.tutorial .owl-carousel').owlCarousel({
 });
 
 let search = document.getElementById('header__hasextend')
+let searchClass = document.getElementsByClassName('xxx')
 let extend = document.getElementById("extend-client");
-search.onclick = function () {
-    if(extend.style.display == 'none') {
-        extend.style.display = 'block';
-    } else {
-        extend.style.display = 'none';
-    }
-}
-let isLanguage = document.getElementById('language');
-let isOption = document.getElementsByClassName('header__navbar-language')[0];
-isLanguage.onclick = function () {
-    if(isOption.style.display == 'none') {
-        isOption.style.display = 'flex';
-    } else {
-        isOption.style.display = 'none';
-    }
-}
+
+// window.onclick = function (e) {
+//     if (e.target != search) {
+//         extend.style.display = 'none';
+//     }
+// }
+
+
+// window.onclick = function (e) {
+//     if (e.target = searchClass) {
+//         extend.style.display = 'block';
+//     }
+// }
+
+
 
 let plusAdult = document.getElementById('plusAdult');
 let minusAdult = document.getElementById('minusAdult');
@@ -148,7 +148,24 @@ let minusInfant = document.getElementById('minusInfant');
 let inputAdult = document.getElementById('inputAdult').value;
 let inputChild = document.getElementById('inputChild').value;
 let inputInfant = document.getElementById('inputInfant').value;
+let clientNumber = document.getElementById('client').innerHTML;
 
+search.onclick = function () {
+    if(extend.style.display === 'none') {
+        extend.style.display = 'block';
+    } else {
+        extend.style.display = 'none';
+    }
+}
+let isLanguage = document.getElementById('language');
+let isOption = document.getElementsByClassName('header__navbar-language')[0];
+isLanguage.onclick = function () {
+    if(isOption.style.display === 'none') {
+        isOption.style.display = 'flex';
+    } else {
+        isOption.style.display = 'none';
+    }
+}
 plusAdult.onclick = function (){
     if(!isNaN(inputAdult)){
         inputAdult++;
@@ -192,4 +209,47 @@ minusChild.onclick = function (){
         document.getElementById('inputChild').value = inputChild;
         return false    
     }
+}
+
+let myModal = document.getElementById('mymodal');
+let overlay = document.getElementById('overlay');
+let resForm = document.getElementById('resform');
+let logForm = document.getElementById('logform');
+let resBtn = document.getElementById('resbtn');
+let logBtn = document.getElementById('logbtn');
+let resBack = document.getElementById('resback')
+let logBack = document.getElementById('logback')
+let switchTolog = document.getElementById('switch-to-log')
+let switchTores = document.getElementById('switch-to-res')
+
+window.addEventListener('click', function (e){
+    if (e.target == resBack || e.target == logBack || e.target == overlay) {
+        myModal.style.display = "none"
+    }
+})
+
+resBtn.addEventListener('click', function () {
+    myModal.style.display = "flex";
+    resForm.style.display = "block";
+    logForm.style.display = "none";
+})
+logBtn.addEventListener('click', function () {
+    myModal.style.display = "flex";
+    logForm.style.display = "block";
+    resForm.style.display = "none"
+})
+switchTolog.addEventListener('click', function(){
+    logForm.style.display = "block";
+    resForm.style.display = "none";
+})
+switchTores.addEventListener('click', function(){
+    resForm.style.display = "block";
+    logForm.style.display = "none";
+})
+
+let fm = document.getElementsByClassName('auth-form__container');
+for (var i = 0; i < fm.length; i++) {
+    fm[i].addEventListener('submit', function (){
+        myModal.style.display = "none";
+    })
 }

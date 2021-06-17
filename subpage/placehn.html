@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hà Nội Place</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!-- reseet css -->
+    <link rel="stylesheet" href="../access/css/main.css">
+    <link rel="stylesheet" href="./subpage.css">
+    <link rel="stylesheet" href="../access/fonts/Themify-icons-font/themify-icons.css">
+    <link rel="stylesheet" href="../access/fonts/fontawesome-free-5.15.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- font Roboto -->
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="grid">
+                <div class="header-container">
+                    <!-- logo + tìm kiếm -->
+                    <div class="header-wrap">
+                        <div class="header__logo">
+                            <a href="#" class="header__logo-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" id="Layer_1" data-name="Layer 1" viewBox="0 0 57 57"><defs><style>.cls-1{fill:#222;}.cls-2{fill:#fff;}</style></defs><title>maxstay</title><circle class="cls-1" cx="28.94" cy="28.51" r="26.47"/><path class="cls-2" d="M48.82,37.57a14.78,14.78,0,0,1-3.22,2.8,17.41,17.41,0,0,1-10,2.73,5.72,5.72,0,0,1-2-.39,3.68,3.68,0,0,1-1.4-1,2.59,2.59,0,0,1-.6-1.43A3.11,3.11,0,0,1,32,38.54l8.18-15.79c.2-.41.2-.68,0-.83a1.1,1.1,0,0,0-.81-.19,2.88,2.88,0,0,0-1.09.35,1.67,1.67,0,0,0-.79.76l-8.18,15.7h-9L28.47,22.9c.26-.51.29-.84.1-1a1,1,0,0,0-.8-.18,3,3,0,0,0-1.06.36,1.44,1.44,0,0,0-.69.67L17.69,38.54H8.38l8.28-15.85a2.39,2.39,0,0,0,.39-1.26A.47.47,0,0,0,16.6,21a2.34,2.34,0,0,0-1,.28,7.51,7.51,0,0,0-1.36.86,12.22,12.22,0,0,0-1.43,1.31,10.37,10.37,0,0,0-1.25,1.63l-.73-.78a18.69,18.69,0,0,1,2.37-3.08,15.75,15.75,0,0,1,2.93-2.45,14,14,0,0,1,3.43-1.6,13,13,0,0,1,3.89-.57,4.31,4.31,0,0,1,3,.87,2.66,2.66,0,0,1,.67,2.6,11.46,11.46,0,0,1,2.05-1.6,13.77,13.77,0,0,1,2.17-1.09,12.27,12.27,0,0,1,2.12-.62,10,10,0,0,1,1.87-.19,5.5,5.5,0,0,1,1.68.24,3.34,3.34,0,0,1,1.23.69,2.46,2.46,0,0,1,.71,1.09A2.9,2.9,0,0,1,38.94,20a9.72,9.72,0,0,1,3.52-2.67,9.46,9.46,0,0,1,3.76-.8,3.33,3.33,0,0,1,2.11.63,3.22,3.22,0,0,1,1.14,1.65,5.33,5.33,0,0,1,.13,2.32,8.34,8.34,0,0,1-.87,2.67L41.63,37.3a1.29,1.29,0,0,0-.12,1.24,1.31,1.31,0,0,0,1.37.62,6,6,0,0,0,2.3-.64,10.24,10.24,0,0,0,2.41-1.61,7,7,0,0,0,1.77-2.33h1.39A12.35,12.35,0,0,1,48.82,37.57Z"/></svg>
+                            </a>
+                        </div>
+                        <div class="header__search shadow">
+                            <div class="header__search-location">
+                                <i class="header__search-location-icon fas fa-search"></i>
+                                <input class="header__search-location-input" type="text" placeholder="Tìm kiếm">
+                            </div>
+                            <div class="header__search-calendar">
+                                <a href="#" class="header__search-calendar-link">
+                                    <i class="far fa-calendar"></i>
+                                    <span>Ngày</span>
+                                </a>
+                            </div>
+                            <div class="header__search-client" id="header__hasextend">
+                                <a href="#" class="header__search-client-link">
+                                    <i class="fas fa-user"></i>
+                                    <span>Số khách</span>
+                                </a>
+                            </div>
+                            <div id="extend-client" class="header__search-client-extend shadow">
+                                <div class="client-extend__row">
+                                    <div class="client-extend__content">
+                                        <div>Người lớn</div>
+                                    </div>
+                                    <div class="client-extend__updown">
+                                        <button class="client-extend__down" id="minusAdult">-</button>
+                                        <input type="text" id="inputAdult" value="0" min="0">
+                                        <button class="client-extend__up" id="plusAdult">+</button>
+                                    </div>
+                                </div>
+                                <div class="client-extend__row">
+                                    <div class="client-extend__content">
+                                        <div>Trẻ em</div>
+                                        <div class="client-extend__content-note">Từ 2 đến 12</div>
+                                    </div>
+                                    <div class="client-extend__updown">
+                                        <button class="client-extend__down" id="minusChild">-</button>
+                                        <input type="text" id="inputChild" value="0" min="0">
+                                        <button class="client-extend__up" id="plusChild">+</button>
+                                    </div>
+                                </div>
+                                <div class="client-extend__row">
+                                    <div class="client-extend__content">
+                                        <div>Trẻ em</div>
+                                        <div class="client-extend__content-note">Từ 2 đến 12</div>
+                                    </div>
+                                    <div class="client-extend__updown">
+                                        <button class="client-extend__down" id="minusInfant">-</button>
+                                        <input type="text" id="inputInfant" value="0" min="0">
+                                        <button class="client-extend__up" id="plusInfant">+</button>
+                                    </div>
+                                </div>
+                                <div class="client-extend__option">
+                                    <button class="client-extend__del">Xóa</button>
+                                    <button class="client-extend__apply">Áp dụng</button>
+                                </div>
+                            </div>
+                            <div class="header__search-button">
+                                <button>
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- đăng ký + đăng nhập + language -->
+                    <div class="header__navbar">
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link is-host">Host</a>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link">Đăng ký</a>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link">Đăng nhập</a>
+                            </li>
+                            <li class="header__navbar-item" style="position: relative" id="language">
+                                <a href="#" class="header__navbar-link is-language">
+                                    <img class="header__navbar-link-img" src="https://www.luxstay.com/icons/vi.svg" alt="hình ảnh">
+                                    <span>VNĐ</span>
+                                </a>
+                            </li>
+                            <div class="header__navbar-language shadow">
+                                <div class="language">
+                                    <div class="vietnamese">
+                                        <img src="https://www.luxstay.com/icons/vi.svg" alt="hỉnh ảnh">
+                                        <span>Việt Nam</span>
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="english">
+                                        <img src="https://www.luxstay.com/icons/en.svg" alt="hỉnh ảnh">
+                                        <span>English</span>
+                                    </div>
+                                    <div class="korean">
+                                        <img src="https://www.luxstay.com/icons/ko.svg" alt="hỉnh ảnh">
+                                        <span>Korean</span>
+                                    </div>
+                                </div>
+                                <div class="currency">
+                                    <div class="vnd">
+                                        <span class="vnd-currency">VNĐ</span>
+                                        <span>Việt Nam Đồng</span>
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="usd">
+                                        <span class="usd-currency">USD</span>
+                                        <span>United States Dollar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="grid">
+                <div class="container__option">
+                    <ul class="container__option-list">
+                        <li class="container__option-item">
+                            <a href="" class="container__option-link">Hủy phòng linh hoạt</a>
+                        </li>
+                        <li class="container__option-item">
+                            <a href="" class="container__option-link">Đặt phòng nhanh</a>
+                        </li>
+                        <li class="container__option-item">
+                            <a href="" class="container__option-link">Giá ưu đãi</a>
+                        </li>
+                        <li class="container__option-item">
+                            <a href="" class="container__option-link">Khu vực</a>
+                        </li>
+                        <li class="container__option-item">
+                            <a href="" class="container__option-link">Loại phòng</a>
+                        </li>
+                        <li class="container__option-item">
+                            <a href="" class="container__option-link">Giá chỗ ở</a>
+                        </li>
+                        <li class="container__option-item">
+                            <a href="" class="container__option-link">Thêm bộ lọc</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="container__advice">
+                    <b>Trước khi đặt phòng, hãy kiểm tra những địa điểm bị hạn chế du lịch trong thời gian này.</b> Sức khỏe và sự an toàn của cộng đồng luôn được đặt hàng đầu. Vì vậy, vui lòng làm theo chỉ thị của chính phủ bởi điều đó thực sự cần thiết.
+                </p>
+                <div class="container__header mt-56 is-flex-box">
+                    <h2>2219 Homestay ở Hà Nội</h2>
+                    <div class="container__sort">
+                        <div id="sortparent" class="sort-parent shadow click-not-close">
+                            <span class="click-not-close">Sắp xếp:</span>
+                            <span class="click-not-close">Lựa chọn</span>
+                            <i class="click-not-close fas fa-chevron-down"></i>
+                        </div>
+                        <ul id="sortchild" class="sort-child shadow click-not-close">
+                            <li>Giá tăng dần</li>
+                            <li>Giá giảm dần</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container__item grid__row">
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace1.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Căn hộ dịch vụ - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>The Galaxy Home - 1 Phòng Ngủ, 55m2, View Thành Phố, Ban Công - Dịch Vọng</a>
+                            </div>
+                            <p class="item-price">790,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace2.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Studio - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Giraffe Room</a>
+                            </div>
+                            <p class="item-price">1,350,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace3.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Studio - 2 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>JOI homestay - căn hộ view phố,, ban công ,gần chợ đêm</a>
+                            </div>
+                            <p class="item-price">450,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace4.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Căn hộ dịch vụ - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Besthome Studio Phan Kế Bính, Ba Đình, Hà Nội</a>
+                            </div>
+                            <p class="item-price">480,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace5.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Studio - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Bohème-Sunny Bacony-HanoiCenter-Rêver Homestay</a>
+                            </div>
+                            <p class="item-price">400,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace6.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Studio - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>QHome D.'El Dorado view Hồ Tây</a>
+                            </div>
+                            <p class="item-price">1,100,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace7.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Studio - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>T[Tram] Studio  🍀 Tràn ngập ánh sáng Weslake</a>
+                            </div>
+                            <p class="item-price">571,895đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace8.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Chung cư - 3 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Căn hộ cao cấp ❤ 3 phòng ngủ, 3 phòng tắm ❤ cách Hồ Tây 3 phút</a>
+                            </div>
+                            <p class="item-price">1,300,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace9.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Homestay - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Rustic Studio 2/ Mặt đường p.Lý Nam Đế/ view rộng/ netflix/ phòng khép kín/ trung tâm HN</a>
+                            </div>
+                            <p class="item-price">600,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace10.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Căn hộ dịch vụ - 2 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Melia' House - Rita Luxury Room Vinhomes Green Bay</a>
+                            </div>
+                            <p class="item-price">855,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace11.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Căn hộ dịch vụ - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>[MWL]🌈 1PN sang trọng 🌟 Nội thất hiện đại 💖 Thiết kế ấn tượng 💧 View Tây Hồ ngoạn mục 🌈</a>
+                            </div>
+                            <p class="item-price">821,622đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace12.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Nhà riêng - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>NYNA House 20LVL08</a>
+                            </div>
+                            <p class="item-price">650,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace13.jpeg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Homestay - 2 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Lotus Homestay Hanoi - Oasis View 1</a>
+                            </div>
+                            <p class="item-price">799,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace14.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Studio - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>AnThy Vinhomes Greenbay @Studio</a>
+                            </div>
+                            <p class="item-price">550,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace15.png" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Căn hộ dịch vụ - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>The Bloom Hà Nội - Căn hộ có phòng ngủ, ban công riêng biệt tại Cầu Giấy</a>
+                            </div>
+                            <p class="item-price">850,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace16.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Homestay - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Lii'Homestay</a>
+                            </div>
+                            <p class="item-price">1,200,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace17.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Căn hộ dịch vụ - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>BHA - R1 - Executive With Balcony</a>
+                            </div>
+                            <p class="item-price">700,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace18.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Chung cư - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Luxury 1BR Apt Vinhomes Skylake near Keangnam</a>
+                            </div>
+                            <p class="item-price">1,100,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace19.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Homestay - 1 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>NaturalLight ☀ OldQuarterStudio & Balcony ☀ NetflixTV</a>
+                            </div>
+                            <p class="item-price">699,000đ/đêm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-10">
+                        <div class="item-img">
+                            <img src="./img/hnplace20.jpg" alt="hình ảnh">
+                        </div>
+                        <div class="item-content">
+                            <p class="item-name">Căn hộ dịch vụ - 2 phòng ngủ</p>
+                            <div class="item-link">
+                                <a href="#"><i class="fas fa-cannabis"></i>Paradise Home - Luxury Apartment with view - Near Hanoi Old Quarter</a>
+                            </div>
+                            <p class="item-price">1,000,000đ/đêm</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pagination">
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">
+                            <i class="fas fa-angle-left"></i>
+                        </a>
+                    </li>
+                    <li class="pagination-item pagination-item--active">
+                        <a href="#" class="pagination-link">1</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">2</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">3</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">4</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">5</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">...</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">14</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-link">
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul> 
+
+                <footer class="footer mt-56">
+                    <div class="footter-end">
+                        <p>
+                            © 2021 Maxstay. Bản quyền thuộc về Công ty TNHH Maxstay Việt Nam - MSDN: 123456789. Mọi hành vi sao chép đều là phạm pháp nếu không có sự cho phép bằng văn bản của chúng tôi.
+                        </p>
+                        <p>
+                            Tầng 2 tòa nhà số 109 Trung Yên 3, phường Yên Hòa, quận Cầu Giấy, Hà Nội.
+                        </p>
+                    </div>
+                </footer>  
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="./subpage.js"></script>       
+            </div>
+        </div>
