@@ -149,6 +149,8 @@ let inputAdult = document.getElementById('inputAdult').value;
 let inputChild = document.getElementById('inputChild').value;
 let inputInfant = document.getElementById('inputInfant').value;
 let clientNumber = document.getElementById('client').innerHTML;
+let delOption = document.getElementById('del-option');
+let applyOption = document.getElementById('apply-option');
 
 search.onclick = function () {
     if(extend.style.display === 'none') {
@@ -157,6 +159,7 @@ search.onclick = function () {
         extend.style.display = 'none';
     }
 }
+
 let isLanguage = document.getElementById('language');
 let isOption = document.getElementsByClassName('header__navbar-language')[0];
 isLanguage.onclick = function () {
@@ -164,6 +167,14 @@ isLanguage.onclick = function () {
         isOption.style.display = 'flex';
     } else {
         isOption.style.display = 'none';
+    }
+}
+window.onclick = function (e) {
+    if (e.target.className.indexOf("yyy") === -1) {
+        isOption.style.display = 'none';
+    }
+    if (e.target.className.indexOf("xxx") === -1) {
+        extend.style.display = 'none';
     }
 }
 plusAdult.onclick = function (){
@@ -210,7 +221,14 @@ minusChild.onclick = function (){
         return false    
     }
 }
-
+delOption.onclick = function () {
+    document.getElementById('inputAdult').value = 0;
+    document.getElementById('inputChild').value = 0;
+    document.getElementById('inputInfant').value = 0;
+}
+applyOption.onclick = function () {
+    extend.style.display = 'none';
+}
 let myModal = document.getElementById('mymodal');
 let overlay = document.getElementById('overlay');
 let resForm = document.getElementById('resform');
