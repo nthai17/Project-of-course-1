@@ -35,12 +35,14 @@ $('.place .owl-carousel').owlCarousel({
     dots: false,
     responsive:{
         0:{
-            items:1
+            items:2,
+            dots: true,
+            margin:12
         },
-        600:{
-            items:3
+        739:{
+            items:2
         },
-        1000:{
+        1023:{
             items:5
         }
     }
@@ -53,12 +55,13 @@ $('.discount .owl-carousel').owlCarousel({
     dots: false,
     responsive:{
         0:{
+            items:1,
+            dots: true
+        },
+        739:{
             items:1
         },
-        600:{
-            items:3
-        },
-        1000:{
+        1023:{
             items:3
         }
     }
@@ -71,12 +74,13 @@ $('.suggestions .owl-carousel').owlCarousel({
     dots: false,
     responsive:{
         0:{
-            items:1
+            items:1,
+            dots: true
         },
-        600:{
+        739:{
             items:2
         },
-        1000:{
+        1024:{
             items:4
         }
     }
@@ -89,12 +93,13 @@ $('.discover .owl-carousel').owlCarousel({
     dots: false,
     responsive:{
         0:{
-            items:1
+            items:1,
+            dots: true
         },
-        600:{
+        739:{
             items:2
         },
-        1000:{
+        1024:{
             items:3
         }
     }
@@ -107,12 +112,13 @@ $('.tutorial .owl-carousel').owlCarousel({
     dots: false,
     responsive:{
         0:{
-            items:1
+            items:1,
+            dots: true
         },
-        600:{
+        739:{
             items:2
         },
-        1000:{
+        1024:{
             items:3
         }
     }
@@ -123,22 +129,6 @@ $('.tutorial .owl-carousel').owlCarousel({
 let search = document.getElementById('header__hasextend')
 let searchClass = document.getElementsByClassName('xxx')
 let extend = document.getElementById("extend-client");
-
-// window.onclick = function (e) {
-//     if (e.target != search) {
-//         extend.style.display = 'none';
-//     }
-// }
-
-
-// window.onclick = function (e) {
-//     if (e.target = searchClass) {
-//         extend.style.display = 'block';
-//     }
-// }
-
-
-
 let plusAdult = document.getElementById('plusAdult');
 let minusAdult = document.getElementById('minusAdult');
 let plusChild = document.getElementById('plusChild');
@@ -151,6 +141,23 @@ let inputInfant = document.getElementById('inputInfant').value;
 let clientNumber = document.getElementById('client').innerHTML;
 let delOption = document.getElementById('del-option');
 let applyOption = document.getElementById('apply-option');
+let isLanguage = document.getElementById('language');
+let isOption = document.querySelector('.header__navbar-language');
+
+window.onclick = function (e) {
+    if (e.target.className.indexOf("yyy") === -1) {
+        isOption.style.display = 'none';
+    }
+    if (e.target.className.indexOf("xxx") === -1) {
+        extend.style.display = 'none';
+    }
+    if (e.target == resBack || e.target == logBack || e.target == overlay) {
+        myModal.style.display = "none"
+    }
+    if (e.target.className.indexOf('yyy') === -1 && navBar.className.indexOf('m-0') === -1){
+        navBar.classList.add('m-0');
+    }
+}
 
 search.onclick = function () {
     if(extend.style.display === 'none') {
@@ -160,8 +167,7 @@ search.onclick = function () {
     }
 }
 
-let isLanguage = document.getElementById('language');
-let isOption = document.getElementsByClassName('header__navbar-language')[0];
+
 isLanguage.onclick = function () {
     if(isOption.style.display === 'none') {
         isOption.style.display = 'flex';
@@ -169,14 +175,7 @@ isLanguage.onclick = function () {
         isOption.style.display = 'none';
     }
 }
-window.onclick = function (e) {
-    if (e.target.className.indexOf("yyy") === -1) {
-        isOption.style.display = 'none';
-    }
-    if (e.target.className.indexOf("xxx") === -1) {
-        extend.style.display = 'none';
-    }
-}
+
 plusAdult.onclick = function (){
     if(!isNaN(inputAdult)){
         inputAdult++;
@@ -242,11 +241,6 @@ let logBack = document.getElementById('logback')
 let switchTolog = document.getElementById('switch-to-log')
 let switchTores = document.getElementById('switch-to-res')
 
-window.addEventListener('click', function (e){
-    if (e.target == resBack || e.target == logBack || e.target == overlay) {
-        myModal.style.display = "none"
-    }
-})
 
 resBtn.addEventListener('click', function () {
     myModal.style.display = "flex";
@@ -282,3 +276,50 @@ for (var i = 0; i < fm.length; i++) {
         myModal.style.display = "none";
     })
 }
+
+var navMobileBtn = document.querySelector('.mobile__nav-btn')
+var navBar = document.querySelector('.header__navbar')
+navMobileBtn.addEventListener('click', function(event){
+    event.stopPropagation()
+    if (navBar.className.indexOf('m-0') !== -1) {
+        navBar.classList.remove('m-0')
+    } else {
+        navBar.classList.add('m-0');
+        isOption.style.display = 'none';
+    }
+})
+
+
+$('.mobile__famouscitys .owl-carousel').owlCarousel({
+    loop:false,
+    margin:8,
+    nav:false,
+    dots: false,
+    responsive:{
+        0:{
+            items:4,
+        },
+        739:{
+            items:0
+        },
+        1023:{
+            items:0
+        }
+    }
+})
+var searchPageToScreenMobile = document.querySelector('.mobile__backtoscreen-btn');
+var mobileSearchPage = document.querySelector('.mobile__search-page');
+var openMobileSearchPage = document.querySelector('.mobile__search-btn');
+    openMobileSearchPage.addEventListener('click', function(){
+        mobileSearchPage.classList.add('m-block');
+    })
+
+    searchPageToScreenMobile.addEventListener('click', function(){
+        mobileSearchPage.classList.remove('m-block');
+    })
+// $('.mobile__search-btn').click(function(){
+//     $('.mobile__search-page').show(100);
+// })
+// $('.mobile__backtoscreen-btn').click(function(){
+//     $('.mobile__search-page').hide(300)
+// })

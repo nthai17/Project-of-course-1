@@ -56,3 +56,13 @@
 .tutorial .owl-nav .owl-next:hover{
     color: #ea6060;
 }
+
+
+
+.mobile__search-page .owl-carousel.owl-drag .owl-item {
+    width: 63px !important;
+}
+
+.mobile__search-page .owl-carousel.owl-loaded{
+    height: 60px;
+}

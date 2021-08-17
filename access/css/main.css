@@ -89,11 +89,12 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-
+.pc-0 {
+    display: none;
+}
 /* header */
 .header{
     width: 100%;
-    border-bottom: 1px solid #f2f2f2;
     background-color: var(--white-color);
     position: fixed;
     top: 0;
@@ -193,7 +194,6 @@ body{
     background-color: white;
     border-radius: 6px;
     padding: 12px;
-    display: none;
 }
 .client-extend__row {
     display: flex;
@@ -309,6 +309,7 @@ body{
     font-weight: 500;
     text-decoration: none;
     padding: 0 12px;
+    cursor: pointer;
 }
 
 .is-host{
@@ -359,7 +360,6 @@ body{
     right: 48px;
     background-color: var(--white-color);
     display: flex;
-    display: none;
 }
 
 .header__navbar-language::after{
@@ -404,14 +404,18 @@ body{
 .vnd-currency, .usd-currency {
     font-weight: 500;
 }
+.mobile__search-btn,
+.mobile__nav-btn{
+    display: none;
+}
 /* slider */
 .slide{
-    padding: 42px 0;
+    margin-top: 81px;
 }
 
 .slider__container{
     position: relative;
-    margin-top: 81px;
+    padding: 42px 0;
 }
 
 .slide__img{
@@ -426,8 +430,8 @@ body{
 .slide__sticky{
     display: flex;
     position: absolute;
-    bottom: 24px;
-    right: 40px;
+    bottom: 62px;
+    right: 24px;
 }
 
 .slide__sticky-dot{
@@ -458,6 +462,8 @@ body{
 /* opening */
 .opening__content-link{
     color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: underline;
 }
 .opening__content-link:hover{
     color: var(--hover-color);
@@ -655,6 +661,9 @@ body{
     margin: 12px 0 0px 0;
     color: var(--primary-color);
     line-height: 1.6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .fix-sticky-suggestions{
@@ -691,7 +700,7 @@ body{
 .discover__item-content-heading{
     position: absolute;
     font-size: 19px;
-    bottom: 8px;
+    top: 174px;
     left: 24px;
     padding-right: 12px;
     line-height: 1.4;
@@ -734,11 +743,9 @@ body{
 }
 
 /* intro */
-.intro__svg{
-    width: 60%;
-    color: var(--text-color);
+.intro svg {
+    transform: translateX(-10px);
 }
-
 .intro__slogan{
     font-size: 30px;
     margin-bottom: 32px;
@@ -917,6 +924,9 @@ body{
 .footter-end p{
     color: #999;
     font-size: 1.4rem;
+    line-height: 2.4rem;
+    margin-bottom: unset;
+    margin-top: unset;
 }
 
 /* call */

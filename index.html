@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./access/css/owl.carousel.css">
     <link rel="stylesheet" href="./access/css/owl.theme.default.css">
     <link rel="stylesheet" href="./access/css/fixcarousel.css">
-    
+    <link rel="stylesheet" href="./access/css/responsive.css">
+    <link rel="icon" href="./access/img/favicon-32x32.png" type="image/png" sizes="32x32">
 </head>
 <body>
     <div class="app">
@@ -21,6 +22,73 @@
         <header class="header">
             <div class="grid">
                 <div class="header-container">
+                    <!-- nút tìm kiếm màn hình mobile -->
+                    <div class="mobile__search-btn m-block">
+                        <i class="ti-search"></i>
+                    </div>
+                    <div class="mobile__search-page" style="display: none">
+                        <div class="mobile__search-input">
+                            <div class="mobile__backtoscreen-btn"><i class="ti-arrow-left"></i></div>
+                            <input type="text" placeholder="Thử tìm kiếm 'Ha Noi'">
+                        </div>
+                        <div class="mobile__famouscitys">
+                            <p>Các thành phố nổi tiếng</p>
+                            <div class="mobile__famouscitys-list owl-carousel owl-theme">
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/Hn.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">Hà Nội</span>
+                                </div>
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/HCM.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">TP. HCM</span>
+                                </div>
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/HA.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">Hội An</span>
+                                </div>
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/ĐL.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">Đà Lạt</span>
+                                </div>
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/ĐN.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">Đà Nẵng</span>
+                                </div>
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/NT.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">Nha Trang</span>
+                                </div>
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/VT.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">Vũng Tàu</span>
+                                </div>
+                                <div class="mobile__famouscitys-item">
+                                    <div class="mobile__famouscitys-img">
+                                        <img src="./access/img/QN.png" alt="Ha Noi">
+                                    </div>
+                                    <span class="mobile__famouscitys-name">Quảng Ninh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile__search-history">
+                            <p>Tìm kiếm gần đây</p>
+                            <div class="mobile__history-box"></div>
+                        </div>
+                    </div>
                     <!-- logo + tìm kiếm -->
                     <div class="header-wrap">
                         <div class="header__logo">
@@ -28,7 +96,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" id="Layer_1" data-name="Layer 1" viewBox="0 0 57 57"><defs><style>.cls-1{fill:#222;}.cls-2{fill:#fff;}</style></defs><title>maxstay</title><circle class="cls-1" cx="28.94" cy="28.51" r="26.47"/><path class="cls-2" d="M48.82,37.57a14.78,14.78,0,0,1-3.22,2.8,17.41,17.41,0,0,1-10,2.73,5.72,5.72,0,0,1-2-.39,3.68,3.68,0,0,1-1.4-1,2.59,2.59,0,0,1-.6-1.43A3.11,3.11,0,0,1,32,38.54l8.18-15.79c.2-.41.2-.68,0-.83a1.1,1.1,0,0,0-.81-.19,2.88,2.88,0,0,0-1.09.35,1.67,1.67,0,0,0-.79.76l-8.18,15.7h-9L28.47,22.9c.26-.51.29-.84.1-1a1,1,0,0,0-.8-.18,3,3,0,0,0-1.06.36,1.44,1.44,0,0,0-.69.67L17.69,38.54H8.38l8.28-15.85a2.39,2.39,0,0,0,.39-1.26A.47.47,0,0,0,16.6,21a2.34,2.34,0,0,0-1,.28,7.51,7.51,0,0,0-1.36.86,12.22,12.22,0,0,0-1.43,1.31,10.37,10.37,0,0,0-1.25,1.63l-.73-.78a18.69,18.69,0,0,1,2.37-3.08,15.75,15.75,0,0,1,2.93-2.45,14,14,0,0,1,3.43-1.6,13,13,0,0,1,3.89-.57,4.31,4.31,0,0,1,3,.87,2.66,2.66,0,0,1,.67,2.6,11.46,11.46,0,0,1,2.05-1.6,13.77,13.77,0,0,1,2.17-1.09,12.27,12.27,0,0,1,2.12-.62,10,10,0,0,1,1.87-.19,5.5,5.5,0,0,1,1.68.24,3.34,3.34,0,0,1,1.23.69,2.46,2.46,0,0,1,.71,1.09A2.9,2.9,0,0,1,38.94,20a9.72,9.72,0,0,1,3.52-2.67,9.46,9.46,0,0,1,3.76-.8,3.33,3.33,0,0,1,2.11.63,3.22,3.22,0,0,1,1.14,1.65,5.33,5.33,0,0,1,.13,2.32,8.34,8.34,0,0,1-.87,2.67L41.63,37.3a1.29,1.29,0,0,0-.12,1.24,1.31,1.31,0,0,0,1.37.62,6,6,0,0,0,2.3-.64,10.24,10.24,0,0,0,2.41-1.61,7,7,0,0,0,1.77-2.33h1.39A12.35,12.35,0,0,1,48.82,37.57Z"/></svg>
                             </a>
                         </div>
-                        <div class="header__search shadow">
+                        <div class="header__search shadow m-0">
                             <div class="header__search-location">
                                 <i class="header__search-location-icon fas fa-search"></i>
                                 <input class="header__search-location-input" type="text" placeholder="Tìm kiếm">
@@ -45,7 +113,7 @@
                                     <span id="client" class="xxx">Số khách</span>
                                 </a>
                             </div>
-                            <div id="extend-client" class="xxx header__search-client-extend shadow">
+                            <div id="extend-client" style="display: none" class="xxx header__search-client-extend shadow">
                                 <div class="client-extend__row xxx">
                                     <div class="client-extend__content xxx">
                                         <div>Người lớn</div>
@@ -91,24 +159,24 @@
                         </div>
                     </div>
                     <!-- đăng ký + đăng nhập + language -->
-                    <div class="header__navbar">
+                    <div class="header__navbar m-0">
                         <ul class="header__navbar-list">
-                            <li class="header__navbar-item">
+                            <li class="header__navbar-item m-0">
                                 <a href="#" class="header__navbar-link is-host">Host</a>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="#" id="resbtn" class="header__navbar-link">Đăng ký</a>
+                                <div id="resbtn" class="header__navbar-link">Đăng ký</div>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="#" id="logbtn" class="header__navbar-link">Đăng nhập</a>
+                                <div id="logbtn" class="header__navbar-link">Đăng nhập</div>
                             </li>
                             <li class="header__navbar-item yyy" style="position: relative" id="language">
-                                <a href="#" class="header__navbar-link is-language yyy">
+                                <div class="header__navbar-link is-language yyy">
                                     <img class="header__navbar-link-img yyy" src="https://www.luxstay.com/icons/vi.svg" alt="hình ảnh">
                                     <span class="yyy">VNĐ</span>
-                                </a>
+                                </div>
                             </li>
-                            <div class="header__navbar-language shadow yyy">
+                            <div class="header__navbar-language shadow yyy" style="display: none;">
                                 <div class="language yyy">
                                     <div class="vietnamese yyy">
                                         <img class="yyy" src="https://www.luxstay.com/icons/vi.svg" alt="hỉnh ảnh">
@@ -137,6 +205,10 @@
                                 </div>
                             </div>
                         </ul>
+                    </div>
+                    <!-- nút menu màn hình mobile -->
+                    <div class="mobile__nav-btn m-block" >
+                        <i class="ti-menu"></i>
                     </div>
                 </div>
             </div>
@@ -255,13 +327,13 @@
                     <h2 class="container__title">Chào mừng đến với Maxstay!</h2>
                     <p class="container__content">Đặt chỗ ở, homestay, cho thuê xe, trải nghiệm và nhiều hơn nữa trên Maxstay</p>
                     <p class="container__content">
-                        <a href="#" id="logbtn2" class="opening__content-link">Đăng nhập</a>
+                        <span id="logbtn2" class="opening__content-link">Đăng nhập</span>
                          hoặc 
-                         <a href="#" id="resbtn2" class="opening__content-link">Đăng ký</a>
+                         <span id="resbtn2" class="opening__content-link">Đăng ký</span>
                           để trải nghiệm!
                     </p>
-                    <div class="grid__row mt-56">
-                        <div class="grid__column-2-12">
+                    <div class="grid__row mt-56 mt-30">
+                        <div class="grid__column-2-12 t-4 m-6">
                             <a href="https://www.luxstay.com/vi/s" target="blank" class="opening__item shadow">
                                 <div class="opening__item-img">
                                     <img src="./access/img/opening-villa.png" alt="hình ảnh">
@@ -272,7 +344,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-12">
+                        <div class="grid__column-2-12 t-4 m-6">
                             <a href="https://www.klook.com/vi/promo/vn-luxstay?aid=13927" target="blank" class="opening__item shadow">
                                 <div class="opening__item-img">
                                     <img src="./access/img/opening-ticked.jpg" alt="hình ảnh">
@@ -286,7 +358,7 @@
                     </div>
                 </div>
                 <!-- Địa điểm nổi bật -->
-                <div class="place mt-56">
+                <div class="place mt-56 mt-30">
                     <h2 class="container__title">Địa điểm nổi bật</h2>
                     <p class="container__content">Cùng Maxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
                     <div class="owl-carousel owl-theme">
@@ -390,11 +462,11 @@
                     </div>
                 </div>
                 <!-- CT khuyến mại -->
-                <div class="discount mt-56">
+                <div class="discount mt-56 mt-30">
                     <h2 class="container__title">Ưu đãi độc quyền</h2>
                     <div class="discount-wrap-content">
                         <p class="container__content">Chỉ có tại Maxstay, hấp dẫn và hữu hạn, book ngay!</p>
-                        <a href="#" class="discount__see-more">
+                        <a href="#" class="discount__see-more m-0">
                             Xem thêm
                         </a>
                     </div>
@@ -450,7 +522,7 @@
                     </div>
                 </div>
                 <!-- Gợi ý theo nhu cầu -->
-                <div class="suggestions mt-56">
+                <div class="suggestions mt-56 mt-30">
                     <h2 class="container__title">Gợi ý từ Maxstay</h2>
                     <p class="container__content">Những địa điểm thường đến mà Maxstay gợi ý dành cho bạn</p>
                     <div class="owl-carousel owl-theme">
@@ -540,14 +612,14 @@
                     </div>
                 </div>
                 <!-- Khám phá -->
-                <div class="discover mt-56">
+                <div class="discover mt-56 mt-30">
                     <h2 class="container__title">Gợi ý khám phá</h2>
                     <p class="container__content">Để mỗi chuyến đi là một hành trình truyền cảm hứng, mỗi căn phòng là một khoảng trời an yên</p>
                     <div class="owl-carousel owl-theme">
                         <div>
                             <a href="https://www.luxstay.com/blog/homestay/5-resort-hang-sang-o-viet-nam-xuat-hien-tren-tap-chi-du-lich-anh.html" target="blank" class="discover__item is-relative-box">
                                 <div class="discover__item-img">
-                                    <img src="./access/img/discover1.jpg" alt="hình ảnh">
+                                    <img src="./access/img/discover1.jpg" class="m-fix-height" alt="hình ảnh">
                                 </div>
                                 <div class="discover__item-content">
                                     <h3 class="discover__item-content-heading">
@@ -629,7 +701,7 @@
                     
                 </div>
                 <!-- Hướng dẫn sd ứng dụng -->
-                <div class="tutorial mt-56">
+                <div class="tutorial mt-56 mt-30">
                     <h2 class="container__title">Hướng dẫn sử dụng</h2>
                     <p class="container__content">Đặt chỗ nhanh, thanh toán đơn giản, sử dụng dễ dàng</p>
                     <div class="owl-theme owl-carousel">
@@ -678,12 +750,12 @@
                 </div>
                 <!-- Thông tin về doanh nghiệp -->
                 <div class="intro">
-                    <div class="grid__row mt-56">
-                        <div class="grid__column-haft">
+                    <div class="grid__row mt-56 mt-30">
+                        <div class="grid__column-haft m-12">
                             <svg xmlns="http://www.w3.org/2000/svg" style="transform: translateX(-10px)" width="414.8px" height="85px"  id="Layer_1" data-name="Layer 1" viewBox="0 0 280 60"><defs><style>.cls-1{fill:#222;}.cls-2{fill:#fff;}</style></defs><title>maxstay</title><circle class="cls-1" cx="28.94" cy="28.51" r="26.47"/><path class="cls-1" d="M103,41.16l8.43-21.95a2.58,2.58,0,0,1,2.4-1.65H114a2.64,2.64,0,0,1,2.44,1.64l9,21.93a1.59,1.59,0,0,1-1.48,2.2h-.4a1.58,1.58,0,0,1-1.49-1l-2.22-5.76a1.61,1.61,0,0,0-1.49-1h-8.56a1.6,1.6,0,0,0-1.5,1l-2.07,5.7a1.6,1.6,0,0,1-1.5,1h-.17A1.6,1.6,0,0,1,103,41.16Zm6.6-8.41h8.74l-2.69-7.14c-.7-1.85-1.25-3.43-1.64-4.72l-1.58,4.3Z"/><path class="cls-1" d="M164.33,34.91h.19a1.58,1.58,0,0,1,1.66,1.2A6.25,6.25,0,0,0,167,38a5.9,5.9,0,0,0,2.6,2,9.8,9.8,0,0,0,3.95.76,9.45,9.45,0,0,0,3.45-.58,4.68,4.68,0,0,0,2.22-1.59,3.66,3.66,0,0,0,.73-2.2,3.34,3.34,0,0,0-.7-2.12,5.29,5.29,0,0,0-2.32-1.52,45.14,45.14,0,0,0-4.59-1.26,22.86,22.86,0,0,1-5-1.61,6.91,6.91,0,0,1-2.76-2.4,5.88,5.88,0,0,1-.9-3.2,6.52,6.52,0,0,1,1.11-3.65A6.83,6.83,0,0,1,168,18a12.38,12.38,0,0,1,4.73-.88,12.82,12.82,0,0,1,5,.93,7.31,7.31,0,0,1,3.37,2.71,7.63,7.63,0,0,1,1,2.22,1.57,1.57,0,0,1-1.41,2h-.2a1.6,1.6,0,0,1-1.64-1.19,4.71,4.71,0,0,0-1.53-2.39,7,7,0,0,0-4.49-1.25,7.25,7.25,0,0,0-4.51,1.13A3.42,3.42,0,0,0,167,24a2.92,2.92,0,0,0,1,2.28c.65.6,2.37,1.21,5.14,1.84a34.2,34.2,0,0,1,5.7,1.64,7.87,7.87,0,0,1,3.33,2.63,6.44,6.44,0,0,1,1.07,3.67,7,7,0,0,1-1.18,3.87,7.77,7.77,0,0,1-3.38,2.83,11.71,11.71,0,0,1-5,1,14.8,14.8,0,0,1-5.86-1,8.23,8.23,0,0,1-3.71-3.06,8.36,8.36,0,0,1-1.19-2.82A1.59,1.59,0,0,1,164.33,34.91Z"/><path class="cls-1" d="M199.88,41.81V20.6h-7a1.52,1.52,0,0,1-1.52-1.52h0a1.52,1.52,0,0,1,1.52-1.52h17.38a1.52,1.52,0,0,1,1.52,1.52h0a1.52,1.52,0,0,1-1.52,1.52h-7V41.81a1.52,1.52,0,0,1-1.52,1.52h-.37A1.52,1.52,0,0,1,199.88,41.81Z"/><path class="cls-1" d="M216.08,41.16l8.67-22.57a1.6,1.6,0,0,1,1.49-1h1.5a1.6,1.6,0,0,1,1.48,1l9.24,22.57a1.59,1.59,0,0,1-1.48,2.2h-.4a1.6,1.6,0,0,1-1.5-1l-2.21-5.76a1.61,1.61,0,0,0-1.5-1h-8.55a1.61,1.61,0,0,0-1.51,1l-2.06,5.7a1.6,1.6,0,0,1-1.5,1h-.18A1.6,1.6,0,0,1,216.08,41.16Zm6.6-8.41h8.74l-2.69-7.14c-.82-2.16-1.43-3.95-1.83-5.34a32.89,32.89,0,0,1-1.39,4.92Z"/><path class="cls-1" d="M252.11,41.71v-8.8a1.59,1.59,0,0,0-.27-.9l-8-11.92a1.63,1.63,0,0,1,1.35-2.53h.23a1.62,1.62,0,0,1,1.36.74l4.6,7c.43.67.85,1.34,1.25,2a1.62,1.62,0,0,0,2.77,0q.65-1,1.41-2.22l4.51-6.85a1.64,1.64,0,0,1,1.36-.73h0A1.62,1.62,0,0,1,264,20.11L255.81,32a1.59,1.59,0,0,0-.29.92v8.79a1.61,1.61,0,0,1-1.62,1.62h-.16A1.62,1.62,0,0,1,252.11,41.71Z"/><path class="cls-1" d="M133.85,40.59a1.71,1.71,0,0,0,1.38,2.74h0a1.33,1.33,0,0,0,1.07-.54l5.93-8.41a.4.4,0,0,0-.33-.64h-2.77a.43.43,0,0,0-.33.17Z"/><path class="cls-1" d="M152.9,20a1.53,1.53,0,0,0-1.23-2.45h0a1.33,1.33,0,0,0-1,.53l-4.41,5.83a.58.58,0,0,0,.46.93h2.52a.2.2,0,0,0,.17-.09Z"/><path class="cls-1" d="M153.37,40.46l-4.8-6.72-2.89-4s-2.76-3.82-3.48-4.86l-.48-.68-4.28-6.05a1.33,1.33,0,0,0-1.08-.56h0A1.74,1.74,0,0,0,135,20.32l3.23,4.53,3.59,5S144,33,144.52,33.74c2,2.82,6.3,9,6.3,9a1.33,1.33,0,0,0,1.08.56h0A1.81,1.81,0,0,0,153.37,40.46Z"/><path class="cls-2" d="M48.82,37.57a14.78,14.78,0,0,1-3.22,2.8,17.41,17.41,0,0,1-10,2.73,5.72,5.72,0,0,1-2-.39,3.68,3.68,0,0,1-1.4-1,2.59,2.59,0,0,1-.6-1.43A3.11,3.11,0,0,1,32,38.54l8.18-15.79c.2-.41.2-.68,0-.83a1.1,1.1,0,0,0-.81-.19,2.88,2.88,0,0,0-1.09.35,1.67,1.67,0,0,0-.79.76l-8.18,15.7h-9L28.47,22.9c.26-.51.29-.84.1-1a1,1,0,0,0-.8-.18,3,3,0,0,0-1.06.36,1.44,1.44,0,0,0-.69.67L17.69,38.54H8.38l8.28-15.85a2.39,2.39,0,0,0,.39-1.26A.47.47,0,0,0,16.6,21a2.34,2.34,0,0,0-1,.28,7.51,7.51,0,0,0-1.36.86,12.22,12.22,0,0,0-1.43,1.31,10.37,10.37,0,0,0-1.25,1.63l-.73-.78a18.69,18.69,0,0,1,2.37-3.08,15.75,15.75,0,0,1,2.93-2.45,14,14,0,0,1,3.43-1.6,13,13,0,0,1,3.89-.57,4.31,4.31,0,0,1,3,.87,2.66,2.66,0,0,1,.67,2.6,11.46,11.46,0,0,1,2.05-1.6,13.77,13.77,0,0,1,2.17-1.09,12.27,12.27,0,0,1,2.12-.62,10,10,0,0,1,1.87-.19,5.5,5.5,0,0,1,1.68.24,3.34,3.34,0,0,1,1.23.69,2.46,2.46,0,0,1,.71,1.09A2.9,2.9,0,0,1,38.94,20a9.72,9.72,0,0,1,3.52-2.67,9.46,9.46,0,0,1,3.76-.8,3.33,3.33,0,0,1,2.11.63,3.22,3.22,0,0,1,1.14,1.65,5.33,5.33,0,0,1,.13,2.32,8.34,8.34,0,0,1-.87,2.67L41.63,37.3a1.29,1.29,0,0,0-.12,1.24,1.31,1.31,0,0,0,1.37.62,6,6,0,0,0,2.3-.64,10.24,10.24,0,0,0,2.41-1.61,7,7,0,0,0,1.77-2.33h1.39A12.35,12.35,0,0,1,48.82,37.57Z"/><path class="cls-1" d="M92.4,17.56h0a1.65,1.65,0,0,0-1.65,1.65V41.69a1.64,1.64,0,0,0,1.65,1.64h0A1.64,1.64,0,0,0,94,41.69V19.21A1.65,1.65,0,0,0,92.4,17.56Z"/><path class="cls-1" d="M71.09,17.56h0a1.64,1.64,0,0,0-1.64,1.65V41.69a1.63,1.63,0,0,0,1.64,1.64h0a1.64,1.64,0,0,0,1.65-1.64V19.21A1.65,1.65,0,0,0,71.09,17.56Z"/><path class="cls-1" d="M88,18.54A.56.56,0,0,0,87,18.36L83.28,29c-.62,1.81-1.08,3.19-1.37,4.13-.26-.85-.67-2.12-1.23-3.82L77.1,18.63a.86.86,0,0,0-1.67.27v3.8a.86.86,0,0,0,0,.28L79.69,35.4a2.16,2.16,0,0,0,2,1.47h0a2.17,2.17,0,0,0,2-1.45L88,23.27A.66.66,0,0,0,88,23Z"/></svg>
                             <h2 class="intro__slogan">TÌM KIẾM CHỖ Ở GIÁ TỐT NHẤT</h2>
                             <p class="intro__content">Maxstay hiện là nền tảng đặt phòng trực tuyến #1 Việt Nam. Đồng hành cùng chúng tôi, bạn có những chuyến đi mang đầy trải nghiệm. Với Maxstay, việc đặt chỗ ở, biệt thự nghỉ dưỡng, khách sạn, nhà riêng, chung cư... trở nên nhanh chóng, thuận tiện và dễ dàng.</p>
-                            <div class="grid__row mt-56">
+                            <div class="grid__row mt-56 mt-30 tm-0">
                                 <div class="grid__column-haft">
                                     <div class="intro__dowload-qr">
                                         <img src="./access/img/qr-code.png" alt="hình ảnh" class="intro__dowload-qr-img">
@@ -708,7 +780,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-haft">
+                        <div class="grid__column-haft m-12">
                             <img src="./access/img/banner.png" alt="hình ảnh" class="intro__banner">
                         </div>
                     </div>
@@ -716,10 +788,10 @@
             </div>  
         </div>
         <!-- Footer -->
-        <footer class="footer mt-56">
+        <footer class="footer mt-56 mt-30">
             <div class="grid">
                 <div class="grid__row">
-                    <div class="grid__column-2-10">
+                    <div class="grid__column-2-10 t-4 m-0">
                         <div class="footer-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="170px" height="35px" id="Layer_1" data-name="Layer 1" viewBox="0 0 267.57 58.72"><defs><style>.cls-1{fill:#222;}.cls-2{fill:#fff;}</style></defs><title>maxstay</title><circle class="cls-1" cx="28.94" cy="28.51" r="26.47"/><path class="cls-1" d="M103,41.16l8.43-21.95a2.58,2.58,0,0,1,2.4-1.65H114a2.64,2.64,0,0,1,2.44,1.64l9,21.93a1.59,1.59,0,0,1-1.48,2.2h-.4a1.58,1.58,0,0,1-1.49-1l-2.22-5.76a1.61,1.61,0,0,0-1.49-1h-8.56a1.6,1.6,0,0,0-1.5,1l-2.07,5.7a1.6,1.6,0,0,1-1.5,1h-.17A1.6,1.6,0,0,1,103,41.16Zm6.6-8.41h8.74l-2.69-7.14c-.7-1.85-1.25-3.43-1.64-4.72l-1.58,4.3Z"/><path class="cls-1" d="M164.33,34.91h.19a1.58,1.58,0,0,1,1.66,1.2A6.25,6.25,0,0,0,167,38a5.9,5.9,0,0,0,2.6,2,9.8,9.8,0,0,0,3.95.76,9.45,9.45,0,0,0,3.45-.58,4.68,4.68,0,0,0,2.22-1.59,3.66,3.66,0,0,0,.73-2.2,3.34,3.34,0,0,0-.7-2.12,5.29,5.29,0,0,0-2.32-1.52,45.14,45.14,0,0,0-4.59-1.26,22.86,22.86,0,0,1-5-1.61,6.91,6.91,0,0,1-2.76-2.4,5.88,5.88,0,0,1-.9-3.2,6.52,6.52,0,0,1,1.11-3.65A6.83,6.83,0,0,1,168,18a12.38,12.38,0,0,1,4.73-.88,12.82,12.82,0,0,1,5,.93,7.31,7.31,0,0,1,3.37,2.71,7.63,7.63,0,0,1,1,2.22,1.57,1.57,0,0,1-1.41,2h-.2a1.6,1.6,0,0,1-1.64-1.19,4.71,4.71,0,0,0-1.53-2.39,7,7,0,0,0-4.49-1.25,7.25,7.25,0,0,0-4.51,1.13A3.42,3.42,0,0,0,167,24a2.92,2.92,0,0,0,1,2.28c.65.6,2.37,1.21,5.14,1.84a34.2,34.2,0,0,1,5.7,1.64,7.87,7.87,0,0,1,3.33,2.63,6.44,6.44,0,0,1,1.07,3.67,7,7,0,0,1-1.18,3.87,7.77,7.77,0,0,1-3.38,2.83,11.71,11.71,0,0,1-5,1,14.8,14.8,0,0,1-5.86-1,8.23,8.23,0,0,1-3.71-3.06,8.36,8.36,0,0,1-1.19-2.82A1.59,1.59,0,0,1,164.33,34.91Z"/><path class="cls-1" d="M199.88,41.81V20.6h-7a1.52,1.52,0,0,1-1.52-1.52h0a1.52,1.52,0,0,1,1.52-1.52h17.38a1.52,1.52,0,0,1,1.52,1.52h0a1.52,1.52,0,0,1-1.52,1.52h-7V41.81a1.52,1.52,0,0,1-1.52,1.52h-.37A1.52,1.52,0,0,1,199.88,41.81Z"/><path class="cls-1" d="M216.08,41.16l8.67-22.57a1.6,1.6,0,0,1,1.49-1h1.5a1.6,1.6,0,0,1,1.48,1l9.24,22.57a1.59,1.59,0,0,1-1.48,2.2h-.4a1.6,1.6,0,0,1-1.5-1l-2.21-5.76a1.61,1.61,0,0,0-1.5-1h-8.55a1.61,1.61,0,0,0-1.51,1l-2.06,5.7a1.6,1.6,0,0,1-1.5,1h-.18A1.6,1.6,0,0,1,216.08,41.16Zm6.6-8.41h8.74l-2.69-7.14c-.82-2.16-1.43-3.95-1.83-5.34a32.89,32.89,0,0,1-1.39,4.92Z"/><path class="cls-1" d="M252.11,41.71v-8.8a1.59,1.59,0,0,0-.27-.9l-8-11.92a1.63,1.63,0,0,1,1.35-2.53h.23a1.62,1.62,0,0,1,1.36.74l4.6,7c.43.67.85,1.34,1.25,2a1.62,1.62,0,0,0,2.77,0q.65-1,1.41-2.22l4.51-6.85a1.64,1.64,0,0,1,1.36-.73h0A1.62,1.62,0,0,1,264,20.11L255.81,32a1.59,1.59,0,0,0-.29.92v8.79a1.61,1.61,0,0,1-1.62,1.62h-.16A1.62,1.62,0,0,1,252.11,41.71Z"/><path class="cls-1" d="M133.85,40.59a1.71,1.71,0,0,0,1.38,2.74h0a1.33,1.33,0,0,0,1.07-.54l5.93-8.41a.4.4,0,0,0-.33-.64h-2.77a.43.43,0,0,0-.33.17Z"/><path class="cls-1" d="M152.9,20a1.53,1.53,0,0,0-1.23-2.45h0a1.33,1.33,0,0,0-1,.53l-4.41,5.83a.58.58,0,0,0,.46.93h2.52a.2.2,0,0,0,.17-.09Z"/><path class="cls-1" d="M153.37,40.46l-4.8-6.72-2.89-4s-2.76-3.82-3.48-4.86l-.48-.68-4.28-6.05a1.33,1.33,0,0,0-1.08-.56h0A1.74,1.74,0,0,0,135,20.32l3.23,4.53,3.59,5S144,33,144.52,33.74c2,2.82,6.3,9,6.3,9a1.33,1.33,0,0,0,1.08.56h0A1.81,1.81,0,0,0,153.37,40.46Z"/><path class="cls-2" d="M48.82,37.57a14.78,14.78,0,0,1-3.22,2.8,17.41,17.41,0,0,1-10,2.73,5.72,5.72,0,0,1-2-.39,3.68,3.68,0,0,1-1.4-1,2.59,2.59,0,0,1-.6-1.43A3.11,3.11,0,0,1,32,38.54l8.18-15.79c.2-.41.2-.68,0-.83a1.1,1.1,0,0,0-.81-.19,2.88,2.88,0,0,0-1.09.35,1.67,1.67,0,0,0-.79.76l-8.18,15.7h-9L28.47,22.9c.26-.51.29-.84.1-1a1,1,0,0,0-.8-.18,3,3,0,0,0-1.06.36,1.44,1.44,0,0,0-.69.67L17.69,38.54H8.38l8.28-15.85a2.39,2.39,0,0,0,.39-1.26A.47.47,0,0,0,16.6,21a2.34,2.34,0,0,0-1,.28,7.51,7.51,0,0,0-1.36.86,12.22,12.22,0,0,0-1.43,1.31,10.37,10.37,0,0,0-1.25,1.63l-.73-.78a18.69,18.69,0,0,1,2.37-3.08,15.75,15.75,0,0,1,2.93-2.45,14,14,0,0,1,3.43-1.6,13,13,0,0,1,3.89-.57,4.31,4.31,0,0,1,3,.87,2.66,2.66,0,0,1,.67,2.6,11.46,11.46,0,0,1,2.05-1.6,13.77,13.77,0,0,1,2.17-1.09,12.27,12.27,0,0,1,2.12-.62,10,10,0,0,1,1.87-.19,5.5,5.5,0,0,1,1.68.24,3.34,3.34,0,0,1,1.23.69,2.46,2.46,0,0,1,.71,1.09A2.9,2.9,0,0,1,38.94,20a9.72,9.72,0,0,1,3.52-2.67,9.46,9.46,0,0,1,3.76-.8,3.33,3.33,0,0,1,2.11.63,3.22,3.22,0,0,1,1.14,1.65,5.33,5.33,0,0,1,.13,2.32,8.34,8.34,0,0,1-.87,2.67L41.63,37.3a1.29,1.29,0,0,0-.12,1.24,1.31,1.31,0,0,0,1.37.62,6,6,0,0,0,2.3-.64,10.24,10.24,0,0,0,2.41-1.61,7,7,0,0,0,1.77-2.33h1.39A12.35,12.35,0,0,1,48.82,37.57Z"/><path class="cls-1" d="M92.4,17.56h0a1.65,1.65,0,0,0-1.65,1.65V41.69a1.64,1.64,0,0,0,1.65,1.64h0A1.64,1.64,0,0,0,94,41.69V19.21A1.65,1.65,0,0,0,92.4,17.56Z"/><path class="cls-1" d="M71.09,17.56h0a1.64,1.64,0,0,0-1.64,1.65V41.69a1.63,1.63,0,0,0,1.64,1.64h0a1.64,1.64,0,0,0,1.65-1.64V19.21A1.65,1.65,0,0,0,71.09,17.56Z"/><path class="cls-1" d="M88,18.54A.56.56,0,0,0,87,18.36L83.28,29c-.62,1.81-1.08,3.19-1.37,4.13-.26-.85-.67-2.12-1.23-3.82L77.1,18.63a.86.86,0,0,0-1.67.27v3.8a.86.86,0,0,0,0,.28L79.69,35.4a2.16,2.16,0,0,0,2,1.47h0a2.17,2.17,0,0,0,2-1.45L88,23.27A.66.66,0,0,0,88,23Z"/></svg>
                             <div class="footer-text">
@@ -739,7 +811,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid__column-2-10">
+                    <div class="grid__column-2-10 t-0 m-0">
                         <div class="footer-item">
                             <h3 class="footer-item__heading">TOP HOMESTAY ĐƯỢC YÊU THÍCH</h3>
                             <a href="#" class="footer-item__link">Homestay Đà Lạt</a>
@@ -754,7 +826,7 @@
                             <a href="#" class="footer-item__link">Homestay Hà Nội</a>
                         </div>
                     </div>
-                    <div class="grid__column-2-10">
+                    <div class="grid__column-2-10 t-0 m-0">
                         <div class="footer-item">
                             <h3 class="footer-item__heading">KHÔNG GIAN ƯA THÍCH</h3>
                             <a href="#" class="footer-item__link">Căn hộ dịch vụ</a>
@@ -763,7 +835,7 @@
                             <a href="#" class="footer-item__link">Studio</a>
                         </div>
                     </div>
-                    <div class="grid__column-2-10">
+                    <div class="grid__column-2-10 t-4 m-0">
                         <div class="footer-item">
                             <h3 class="footer-item__heading">VỀ CHÚNG TÔI</h3>
                             <a href="#" class="footer-item__link">Block</a>
@@ -775,7 +847,7 @@
                             <a href="#" class="footer-item__link">Tạp trí du lịch</a>
                         </div>
                     </div>
-                    <div class="grid__column-2-10">
+                    <div class="grid__column-2-10 t-4 m-12">
                         <div class="footer-item">
                             <h3 class="footer-item__heading">TẢI ỨNG DỤNG MAXSTAY</h3>
                             <div class="footer__flex-box">
@@ -795,9 +867,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="footer-follow pc-0 t-block m-block">
+                            <h3 class="footer-item__heading">FOLLOW US</h3>
+                            <div class="footer-follow__type">
+                                <a href="#">
+                                    <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill" style="width: 28px; height: 28px;"><g fill="none" fill-rule="evenodd"><circle pid="0" cx="12" cy="12" r="12" fill="#484848"></circle><path pid="1" fill="#FFF" d="M14.333 12c0-.644-.228-1.194-.683-1.65A2.248 2.248 0 0012 9.667c-.644 0-1.194.228-1.65.683A2.248 2.248 0 009.667 12c0 .644.228 1.194.683 1.65a2.248 2.248 0 001.65.683c.644 0 1.194-.228 1.65-.683a2.248 2.248 0 00.683-1.65zm1.258 0c0 .997-.35 1.844-1.048 2.543-.699.699-1.546 1.048-2.543 1.048-.997 0-1.844-.35-2.543-1.048-.699-.699-1.048-1.546-1.048-2.543 0-.997.35-1.844 1.048-2.543.699-.699 1.546-1.048 2.543-1.048.997 0 1.844.35 2.543 1.048.699.699 1.048 1.546 1.048 2.543zm.985-3.737a.81.81 0 01-.247.592.808.808 0 01-.592.247.808.808 0 01-.592-.247.808.808 0 01-.247-.592c0-.23.082-.428.247-.592a.808.808 0 01.592-.247.81.81 0 01.592.247.808.808 0 01.247.592zM12 6.258l-.697-.005a49.446 49.446 0 00-.962 0c-.219.003-.512.012-.88.028-.367.015-.68.045-.938.09a3.654 3.654 0 00-.652.17 2.365 2.365 0 00-.802.528c-.23.23-.407.498-.529.802a3.654 3.654 0 00-.168.652 7.223 7.223 0 00-.091.939c-.016.367-.025.66-.028.88a49.9 49.9 0 000 .96l.005.698-.005.697c-.003.423-.003.743 0 .962.003.219.012.512.028.88.015.367.045.68.09.938.046.258.103.476.17.652a2.375 2.375 0 001.33 1.331c.176.066.394.123.652.168.258.046.571.076.939.091.367.016.66.025.88.028.218.003.538.003.96 0l.698-.005.697.005c.423.003.743.003.962 0 .219-.003.512-.012.88-.028.367-.015.68-.045.938-.09.258-.046.476-.103.652-.17a2.375 2.375 0 001.331-1.33c.066-.176.123-.394.168-.652.046-.258.076-.571.091-.939.016-.367.025-.66.028-.88a49.9 49.9 0 000-.96L17.742 12l.005-.697c.003-.423.003-.743 0-.962a33.766 33.766 0 00-.028-.88 7.223 7.223 0 00-.09-.938 3.654 3.654 0 00-.17-.652 2.365 2.365 0 00-.528-.802 2.365 2.365 0 00-.802-.529 3.654 3.654 0 00-.652-.168 7.223 7.223 0 00-.939-.091c-.367-.016-.66-.025-.88-.028a49.9 49.9 0 00-.96 0L12 6.258zM19 12c0 1.392-.015 2.355-.046 2.89-.06 1.263-.437 2.242-1.13 2.934-.692.693-1.67 1.07-2.935 1.13-.534.03-1.497.046-2.889.046-1.392 0-2.355-.015-2.89-.046-1.263-.06-2.242-.437-2.934-1.13-.693-.692-1.07-1.67-1.13-2.935C5.016 14.355 5 13.392 5 12c0-1.392.015-2.355.046-2.89.06-1.263.437-2.242 1.13-2.934.692-.693 1.67-1.07 2.935-1.13C9.645 5.016 10.608 5 12 5c1.392 0 2.355.015 2.89.046 1.263.06 2.242.437 2.934 1.13.693.692 1.07 1.67 1.13 2.935.03.534.046 1.497.046 2.889z"></path></g></svg>
+                                </a>
+                                <a href="#">
+                                    <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill" style="width: 28px; height: 28px;"><g fill="none" fill-rule="evenodd"><circle pid="0" cx="12" cy="12" r="12" fill="#484848"></circle><path pid="1" fill="#FFF" d="M10.679 13.884l3.865-1.997-3.865-2.02v4.017zM12.156 7c.894 0 1.758.012 2.591.036.834.024 1.445.05 1.833.076l.583.032a5.326 5.326 0 01.32.036l.187.036c.088.016.164.037.228.064.064.026.138.06.224.103.085.043.167.095.247.156a1.894 1.894 0 01.356.36c.05.066.127.222.231.467.104.245.174.513.212.806.042.341.076.704.1 1.09.024.386.038.688.044.907v1.405c.005.772-.043 1.544-.144 2.316a3.186 3.186 0 01-.2.795c-.096.237-.18.4-.255.491l-.112.136c-.075.08-.152.15-.232.211-.08.062-.162.112-.247.152a6.87 6.87 0 01-.224.1c-.064.027-.14.048-.228.064l-.191.036a4.882 4.882 0 01-.315.036c-1.337.1-3.006.151-5.008.151-1.102-.01-2.06-.027-2.871-.051a62.25 62.25 0 01-1.601-.06l-.392-.032-.287-.032a3.791 3.791 0 01-.435-.08 2.454 2.454 0 01-.408-.168 1.597 1.597 0 01-.575-.475c-.05-.066-.127-.222-.231-.467a3.04 3.04 0 01-.212-.807c-.042-.34-.076-.704-.1-1.09A25.651 25.651 0 015 12.894v-1.406c-.005-.772.043-1.544.144-2.316.037-.293.104-.557.2-.794.096-.237.18-.401.255-.492l.112-.135c.075-.08.152-.15.232-.212.08-.061.162-.113.247-.156a3.65 3.65 0 01.224-.103c.064-.027.14-.048.228-.064l.187-.036a5.326 5.326 0 01.32-.036C8.485 7.048 10.154 7 12.156 7z"></path></g></svg>
+                                </a>
+                                <a href="#">
+                                    <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill" style="width: 28px; height: 28px;"><g fill="none" fill-rule="evenodd"><circle pid="0" cx="12" cy="12" r="12" fill="#484848"></circle><path pid="1" fill="#FFF" d="M15.429 5.242v2.176h-1.246c-.455 0-.762.098-.921.296-.159.198-.238.495-.238.89v1.558h2.325l-.31 2.44h-2.015v6.255h-2.429v-6.255H8.571v-2.44h2.024V8.365c0-1.022.275-1.814.826-2.377.55-.564 1.283-.845 2.198-.845.778 0 1.381.033 1.81.099z"></path></g></svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="grid__row mt-56 footer-f2">
+                <div class="grid__row mt-56 mt-30 footer-f2 t-0 m-0">
                     <div class="footer-transaction grid__column-4-10">
                         <h3 class="footer-item__heading">SECURE YOUR TRANSACTION</h3>
                         <div class="footer-transaction__type">
@@ -813,7 +899,7 @@
                             <a href=""><img src="./access/img/dmca.png" alt="hình ảnh"></a>
                         </div>
                     </div>
-                    <div class="footer-follow grid__column-2-10">
+                    <div class="footer-follow grid__column-2-10 t-0">
                         <h3 class="footer-item__heading">FOLLOW US</h3>
                         <div class="footer-follow__type">
                             <a href="#">
@@ -840,7 +926,7 @@
         </footer>
     </div>
     <!-- Nút ĐT liên lạc -->
-    <a href="#" class="call">
+    <a href="#" class="call m-0">
         <div class="call-center">
             <i class="call-icon fas fa-phone-alt"></i>
             <div class="border"></div>
