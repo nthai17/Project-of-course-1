@@ -168,7 +168,7 @@
         background-color: #fff;
         top: 61px;
         right: 1px;
-        width: 140px;
+        width: 186px;
         border-radius: 0 0 16px 16px;
         box-shadow: -1px 1px 5px #8888;
         animation: subIn ease-out 0.3s;
@@ -182,12 +182,16 @@
         width: 100%;
         justify-content: center;
     }
+    .header__navbar-item:last-child{
+        border-bottom: none;
+    }
     .header__navbar-link {
         width: 100%;
         height: 46px;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 1.6rem;
     }
     .header__navbar-language::after {
         right: 27px;
