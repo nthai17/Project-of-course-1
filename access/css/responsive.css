@@ -182,8 +182,8 @@
         width: 100%;
         justify-content: center;
     }
-    .header__navbar-item:last-child{
-        border-bottom: none;
+    #language{
+        border-bottom: unset;
     }
     .header__navbar-link {
         width: 100%;
