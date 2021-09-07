@@ -219,20 +219,32 @@
         <div class="modal__body">
             <!-- Register form -->
             <div class="auth-form" id="resform">
-                    <form action="" class="auth-form__container">
+                    <form action="" class="auth-form__container" id="form-dk">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Đăng ký</h3>
                             <span class="auth-form__switch-btn" id="switch-to-log">Đăng nhập</span>
                         </div>
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input type="text" name="name" placeholder="Tên đăng nhập" required class="auth-form__input">
+                                <input type="text" name="name" id="input-name" placeholder="Tên đăng nhập" class="auth-form__input">
+                                <span class="err-note" style="font-size: 14px;
+                                margin-top: 4px;
+                                padding: 0 8px;
+                                color: red;display: inline-block;"></span>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" name="password" placeholder="Mật khẩu của bạn" required class="auth-form__input">
+                                <input type="password" name="password" id="input-password" placeholder="Mật khẩu của bạn" class="auth-form__input">
+                                <span class="err-note" style="font-size: 14px;
+                                margin-top: 4px;
+                                padding: 0 8px;
+                                color: red;display: inline-block;"></span>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" name="password" placeholder="Nhập lại mật khẩu" required class="auth-form__input">
+                                <input type="password" name="password" id="input-repassword" placeholder="Nhập lại mật khẩu" class="auth-form__input">
+                                <span class="err-note" style="font-size: 14px;
+                                margin-top: 4px;
+                                padding: 0 8px;
+                                color: red;display: inline-block;"></span>
                             </div>
                         </div>
                         <div class="auth-form__aside">
@@ -260,17 +272,25 @@
             </div>
             <!-- Login form -->
             <div class="auth-form" id="logform">
-                <form action="" class="auth-form__container">
+                <form action="" class="auth-form__container" id="form-dn">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng nhập</h3>
                         <span class="auth-form__switch-btn" id="switch-to-res">Đăng ký</span>
                     </div>
                     <div class="auth-form__form">
                         <div class="auth-form__group">
-                            <input type="text" name="name" placeholder="Tên đăng nhập" required class="auth-form__input">
+                            <input type="text" name="name" id="input-name-dn" placeholder="Tên đăng nhập" required class="auth-form__input">
+                            <span class="err-note" style="font-size: 14px;
+                                margin-top: 4px;
+                                padding: 0 8px;
+                                color: red;display: inline-block;"></span>
                         </div>
                         <div class="auth-form__group">
-                            <input type="password" name="passwword" placeholder="Mật khẩu của bạn" required class="auth-form__input">
+                            <input type="password" name="passwword" id="input-password-dn" placeholder="Mật khẩu của bạn" required class="auth-form__input">
+                            <span class="err-note" style="font-size: 14px;
+                                margin-top: 4px;
+                                padding: 0 8px;
+                                color: red;display: inline-block;"></span>
                         </div>
                     </div>
                     <div class="auth-form__aside">
@@ -935,5 +955,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./access/js/owl.carousel.min.js"></script>
     <script src="./access/js/app.js"></script>
+    <script src="./access/js/validator.js"></script>
+    <script>
+        Validator({
+        form: '#form-dk',
+        errorSeclector: '.err-note',
+        rules: [
+        Validator.isRequired('#input-name'),
+        Validator.minLength('#input-password', 6),
+        Validator.minLength('#input-repassword', 6),
+            ]
+        });
+        Validator({
+        form: '#form-dn',
+        errorSeclector: '.err-note',
+        rules: [
+        Validator.isRequired('#input-name-dn'),
+        Validator.minLength('#input-password-dn', 6),
+            ]
+        })
+    </script>
 </body>
 </html>

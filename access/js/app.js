@@ -1,3 +1,5 @@
+
+
 let slideIndex;
 function slideShow() {
     let slides = document.getElementsByClassName("slide__img");
@@ -323,3 +325,5 @@ var openMobileSearchPage = document.querySelector('.mobile__search-btn');
 // $('.mobile__backtoscreen-btn').click(function(){
 //     $('.mobile__search-page').hide(300)
 // })
+
+
