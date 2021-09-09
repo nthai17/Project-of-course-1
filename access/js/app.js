@@ -272,12 +272,12 @@ logBtn2.addEventListener('click', function () {
     logForm.style.display = "block";
     resForm.style.display = "none"
 })
-let fm = document.getElementsByClassName('auth-form__container');
-for (var i = 0; i < fm.length; i++) {
-    fm[i].addEventListener('submit', function (){
-        myModal.style.display = "none";
-    })
-}
+// let fm = document.getElementsByClassName('auth-form__container');
+// for (var i = 0; i < fm.length; i++) {
+//     fm[i].addEventListener('submit', function (){
+//         myModal.style.display = "none";
+//     })
+// }
 
 var navMobileBtn = document.querySelector('.mobile__nav-btn')
 var navBar = document.querySelector('.header__navbar')
@@ -327,3 +327,16 @@ var openMobileSearchPage = document.querySelector('.mobile__search-btn');
 // })
 
 
+resForm.onkeyup = function(e){
+    switch (e.which) {
+        case 27:
+        resForm.style.display = 'none'
+        break;
+        case 13:
+            console.log('hi');
+        break;
+        default:
+            console.log('haha');
+
+    }
+}

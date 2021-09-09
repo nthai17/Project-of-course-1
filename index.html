@@ -227,24 +227,15 @@
                         <div class="auth-form__form">
                             <div class="auth-form__group">
                                 <input type="text" name="name" id="input-name" placeholder="Tên đăng nhập" class="auth-form__input">
-                                <span class="err-note" style="font-size: 14px;
-                                margin-top: 4px;
-                                padding: 0 8px;
-                                color: red;display: inline-block;"></span>
+                                <span class="err-note" style="font-size: 14px;margin-top: 4px;padding: 0 8px;color: red;display: inline-block;"></span>
                             </div>
                             <div class="auth-form__group">
                                 <input type="password" name="password" id="input-password" placeholder="Mật khẩu của bạn" class="auth-form__input">
-                                <span class="err-note" style="font-size: 14px;
-                                margin-top: 4px;
-                                padding: 0 8px;
-                                color: red;display: inline-block;"></span>
+                                <span class="err-note" style="font-size: 14px;margin-top: 4px;padding: 0 8px;color: red;display: inline-block;"></span>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" name="password" id="input-repassword" placeholder="Nhập lại mật khẩu" class="auth-form__input">
-                                <span class="err-note" style="font-size: 14px;
-                                margin-top: 4px;
-                                padding: 0 8px;
-                                color: red;display: inline-block;"></span>
+                                <input type="password" name="re-password" id="input-repassword" placeholder="Nhập lại mật khẩu" class="auth-form__input">
+                                <span class="err-note" style="font-size: 14px;margin-top: 4px;padding: 0 8px;color: red;display: inline-block;"></span>
                             </div>
                         </div>
                         <div class="auth-form__aside">
@@ -279,18 +270,12 @@
                     </div>
                     <div class="auth-form__form">
                         <div class="auth-form__group">
-                            <input type="text" name="name" id="input-name-dn" placeholder="Tên đăng nhập" required class="auth-form__input">
-                            <span class="err-note" style="font-size: 14px;
-                                margin-top: 4px;
-                                padding: 0 8px;
-                                color: red;display: inline-block;"></span>
+                            <input type="text" name="name" id="input-name-dn" placeholder="Tên đăng nhập" class="auth-form__input">
+                            <span class="err-note" style="font-size: 14px;margin-top: 4px;padding: 0 8px;color: red;display: inline-block;"></span>
                         </div>
                         <div class="auth-form__group">
-                            <input type="password" name="passwword" id="input-password-dn" placeholder="Mật khẩu của bạn" required class="auth-form__input">
-                            <span class="err-note" style="font-size: 14px;
-                                margin-top: 4px;
-                                padding: 0 8px;
-                                color: red;display: inline-block;"></span>
+                            <input type="password" name="passwword" id="input-password-dn" placeholder="Mật khẩu của bạn" class="auth-form__input">
+                            <span class="err-note" style="font-size: 14px;margin-top: 4px;padding: 0 8px;color: red;display: inline-block;"></span>
                         </div>
                     </div>
                     <div class="auth-form__aside">
@@ -957,22 +942,38 @@
     <script src="./access/js/app.js"></script>
     <script src="./access/js/validator.js"></script>
     <script>
+        // form đăng ký
         Validator({
         form: '#form-dk',
+        formGroup: '.auth-form__group',
         errorSeclector: '.err-note',
         rules: [
         Validator.isRequired('#input-name'),
+        Validator.isRequired('#input-password'),
         Validator.minLength('#input-password', 6),
-        Validator.minLength('#input-repassword', 6),
-            ]
+        Validator.isRequired('#input-repassword'),
+        Validator.isConfirm('#input-repassword', function(){
+            return document.querySelector('#form-dk #input-password').value;
+        }, 'Mật khẩu không khớp'),
+        ],
+        onSubmit: function(data){
+            console.log(data);
+        }
         });
+
+        // form đăng nhập
         Validator({
         form: '#form-dn',
+        formGroup: '.auth-form__group',
         errorSeclector: '.err-note',
         rules: [
         Validator.isRequired('#input-name-dn'),
+        Validator.isRequired('#input-password-dn'),
         Validator.minLength('#input-password-dn', 6),
-            ]
+        ],
+        onSubmit: function(data){
+            console.log(data);
+        }
         })
     </script>
 </body>

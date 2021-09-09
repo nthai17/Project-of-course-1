@@ -1091,7 +1091,7 @@ body{
 .auth-form__group{
     margin-top: 8px;
 }
-.isvalid .auth-form__input{
+.invalid .auth-form__input{
     border: 1px solid red;
 }
 
